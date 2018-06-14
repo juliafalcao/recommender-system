@@ -97,10 +97,8 @@ tag_weights_per_user.drop(["tag_listen_count", "user_listen_count"], axis = 1, i
 print(tag_weights_per_user)
 
 
-
-
-# tests
-
+# tests (completely failed)
+"""
 user = 2
 artist = 51
 listen_count = 13883
@@ -128,3 +126,19 @@ for row in uta[uta["artist_id"] == artist].iterrows():
     
 
 print(f"calculated weight: {artist_new_weight}")
+"""
+
+
+
+"""
+final table
+user_id / artist_id / tag1 / tag2 / tag3 / tag4 / tag5 / (target?)
+tags 1-5: chosen by heighest weights for the artist, but listed as the weights for the user
+"""
+
+final = user_artists[["user_id", "artist_id"]].sort_values(by = "user_id")
+best_tags_per_artist = tag_weights_per_artist.sort_values(by = ["artist_id", "tag_weight"])
+
+
+# check if all artists have at least 5 tags
+grouped = tag_weights_per_artist.groupby("artist_id")
