@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt # eventually
 import codecs
+import typing
 
 """
 read dataset into dataframes
@@ -94,51 +95,61 @@ tag_weights_per_user = tag_listen_counts.merge(total_listen_counts, on = "user_i
 tag_weights_per_user.rename(columns = {"listen_count": "user_listen_count"}, inplace = True)
 tag_weights_per_user["tag_weight"] = tag_weights_per_user["tag_listen_count"] / tag_weights_per_user["user_listen_count"]
 tag_weights_per_user.drop(["tag_listen_count", "user_listen_count"], axis = 1, inplace = True)
-print(tag_weights_per_user)
 
 
 # tests (completely failed)
 """
-user = 2
-artist = 51
-listen_count = 13883
-
 total_listen_count = int(total_listen_counts[total_listen_counts["user_id"] == user]["listen_count"])
 artist_weight = listen_count / total_listen_count
 print(f"original weight: {artist_weight}")
 
-artist_new_weight = 0
-tags = 0
-
-for row in uta[uta["artist_id"] == artist].iterrows():
-    row = row[1]
-    
-    bonus = 2 if row["user_id"] == user else 1
-    tag = row["tag_id"]
-    twpa = tag_weights_per_artist
-    tag_weight_for_artist = twpa[(twpa["artist_id"] == artist) & (twpa["tag_id"] == tag)]["tag_weight"]
-    twpu = tag_weights_per_user
-    tag_weight_for_user = twpu[(twpu["user_id"] == user) & (twpa["tag_id"] == tag)]["tag_weight"]
-    if tag_weight_for_user.empty: tag_weight_for_user = 0
-
-    artist_new_weight += bonus * float(tag_weight_for_user) * float(tag_weight_for_artist)
-    tags += 1
-    
-
-print(f"calculated weight: {artist_new_weight}")
 """
-
 
 
 """
 final table
-user_id / artist_id / tag1 / tag2 / tag3 / tag4 / tag5 / (target?)
-tags 1-5: chosen by heighest weights for the artist, but listed as the weights for the user
+user_id / artist_id / tag1 / tag2 / tag3 / tag4 / tag5 / listen_count
+tags 1-5: tag IDs of tags chosen by heighest weights for the artist
+for each prediction, use only final[final["user_id"] == user]
 """
 
 final = user_artists[["user_id", "artist_id"]].sort_values(by = "user_id")
+
+
+# TESTING: artists that have less than 5 tags
+tag_counts = tag_weights_per_artist.groupby(["artist_id"])["tag_id"].count()
+tag_counts = pd.DataFrame(tag_counts).reset_index()
+tag_counts.rename(columns = {"tag_id": "tag_count"}, inplace = True)
+# print(tag_counts[tag_counts["tag_count"] < 5])
+
+# find highest rated tags for each artist
 best_tags_per_artist = tag_weights_per_artist.sort_values(by = ["artist_id", "tag_weight"])
+best_tags_per_artist = best_tags_per_artist.reset_index().drop("index", axis = 1)
+
+def recommend_for_user(user: int, n: int = 5):
+    # TODO: check if user exists
+
+    artists = user_artists.loc[user_artists["user_id"] == user]
+    artists = artists.drop("user_id", axis = 1)
+    total_listen_count = artists["listen_count"].sum()
+    artists["listen_%"] = artists["listen_count"] / total_listen_count
+    
+    # print(artists.head())
+    
+    # print(best_tags_per_artist)
+    artists["top_tags"] = artists.apply(get_top_tags)
+    # setar colunas tag1 até tag5
+    print(artists)
 
 
-# check if all artists have at least 5 tags
-grouped = tag_weights_per_artist.groupby("artist_id")
+def get_top_tags(artist: int) -> tuple:
+    top_tags = best_tags_per_artist[best_tags_per_artist["artist_id"] == artist]
+    top_tags = best_tags_per_artist.ix[0:4, "tag_id"] if len(top_tags) > 5 else best_tags_per_artist.ix[0:(len(top_tags)-1), "tag_id"]
+    return tuple(top_tags)
+
+
+    # user_artists: user_id / artist_id / listen_count
+    # user_tagged_artists: user_id / artist_id / tag_id / (day / month / year)
+
+
+recommend_for_user(2)
