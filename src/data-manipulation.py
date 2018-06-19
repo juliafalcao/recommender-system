@@ -148,9 +148,9 @@ artist_tag_names = artist_tag_names[["tag", "artist_name"]]
 # print(artist_tag_names[artist_tag_names["tag"] == "the beatles"])
 
 """
-top_tags: user_id / tag_id / tag / popularity / weight / score
-top tags per (user, artist) pair
-score = popularity * weight
+    top_tags: user_id / tag_id / tag / popularity / weight / score
+    top tags per (user, artist) pair
+    score = popularity * weight
 """
 top_tags = tag_weights[["user_id", "tag_id", "tag", "weight"]].merge(tag_popularities[["tag_id", "popularity"]], on = "tag_id")
 top_tags = top_tags[["user_id", "tag_id", "tag", "popularity", "weight"]]
@@ -161,8 +161,8 @@ top_tags.sort_values(by = ["user_id", "score"], ascending = [True, False], inpla
 # print(top_tags.head(30).to_string())
 
 """
-artist_tags: artist_id / tag_id / tag / popularity
-all tags used for each artist, from most to least popular
+    artist_tags: artist_id / tag_id / tag / popularity
+    all tags used for each artist, from most to least popular
 """
 artist_tags = uta[["artist_id", "tag_id"]].drop_duplicates(keep = "first")
 artist_tags = artist_tags.merge(tag_popularities, on = "tag_id")
@@ -171,9 +171,9 @@ artist_tags.drop("uses", axis = 1, inplace = True)
 # print(artist_tags)
 
 """
-final table: user_id / tag_1 / tag_2 / tag_3 / tag_4 / tag_5 / artist_id
-top 5 tags: chosen by most popular and most relevant to the user
-            if less than 5: filled with popular tags, regardless of importance to user
+    final table: user_id / tag_1 / tag_2 / tag_3 / tag_4 / tag_5 / artist_id
+    top 5 tags: chosen by most popular and most relevant to the user
+                if less than 5: filled with popular tags, regardless of importance to user
 """
 
 final = user_artists[["user_id", "artist_id"]]
@@ -182,3 +182,14 @@ final.sort_values(by = "user_id", inplace = True)
 
 available_tags = artist_tags[["artist_id", "tag_id", "popularity"]]
 available_tags = available_tags.merge(top_tags[["user_id", "tag_id", "score"]], on = "tag_id")
+
+def get_top_tags(user: int, artist: int) -> tuple:
+    top_5_tags = top_tags[top_tags["user_id"] == user]
+    top_5_tags = top_5_tags[top_5_tags["tag_id"].isin(artist_tags[artist_tags["artist_id"] == artist]["tag_id"])]
+
+    if len(top_5_tags >= 5):
+        return tuple(top_5_tags["tag_id"][0:5])
+
+    print(top_5_tags)
+
+print(get_top_tags(2100, 3))
