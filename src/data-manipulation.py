@@ -171,25 +171,56 @@ artist_tags.drop("uses", axis = 1, inplace = True)
 # print(artist_tags)
 
 """
-    final table: user_id / tag_1 / tag_2 / tag_3 / tag_4 / tag_5 / artist_id
+    final table: user_id / tag1 / tag2 / tag3 / tag4 / tag5 / artist_id
     top 5 tags: chosen by most popular and most relevant to the user
                 if less than 5: filled with popular tags, regardless of importance to user
 """
 
-final = user_artists[["user_id", "artist_id"]]
-final = final.merge(artists, on = "artist_id").drop("url", axis = 1).rename(columns = {"name": "artist_name"})
-final.sort_values(by = "user_id", inplace = True)
-
+# ?
 available_tags = artist_tags[["artist_id", "tag_id", "popularity"]]
 available_tags = available_tags.merge(top_tags[["user_id", "tag_id", "score"]], on = "tag_id")
 
+"""
+Function that returns a tuple of the top 5 tags for an (user, artist) pair.
+Criteria for choosing the tags:
+1. tags the artist has and the user likes, ranked by score
+2. tags the artist has, ranked by popularity
+3. if still less than 5, fill with 0
+"""
 def get_top_tags(user: int, artist: int) -> tuple:
     top_5_tags = top_tags[top_tags["user_id"] == user]
     top_5_tags = top_5_tags[top_5_tags["tag_id"].isin(artist_tags[artist_tags["artist_id"] == artist]["tag_id"])]
 
-    if len(top_5_tags >= 5):
-        return tuple(top_5_tags["tag_id"][0:5])
+    if len(top_5_tags) >= 5:
+        return tuple(top_5_tags["tag_id"][:5])
+    
+    else:
+        # user doesn't know 5 tags the artist has:
+        # fill with most popular tags for the artist
+        top_5_tags = list(top_5_tags["tag_id"])
+        all_artist_tags = artist_tags[artist_tags["artist_id"] == artist][["artist_id", "tag_id", "tag", "popularity"]] # remover "tag"
+        all_artist_tags.sort_values(by = "popularity", ascending = False, inplace = True)
+        all_artist_tags = list(all_artist_tags["tag_id"])
+        remaining_tags = [tag for tag in all_artist_tags if tag not in top_5_tags]
+        top_5_tags.extend(remaining_tags)
 
-    print(top_5_tags)
+        if len(top_5_tags) >= 5:
+            return top_5_tags[:5]
+        
+        else: # if the artist's other tags weren't enough:
+            missing = 5 - len(top_5_tags)
+            top_5_tags.extend([0] * missing) # fill with zeroes
+            return top_5_tags[:5]
 
-print(get_top_tags(2100, 3))
+# print(get_top_tags(2095, 18680)) # artist has 4 tags, user likes 3
+# print(top_tags[top_tags["user_id"] == 2095])
+# print(artist_tags[artist_tags["artist_id"] == 18680])
+
+final = user_artists[["user_id", "artist_id"]]
+final = final.merge(artists, on = "artist_id").drop("url", axis = 1).rename(columns = {"name": "artist_name"})
+final.sort_values(by = "user_id", inplace = True)
+final["top_5_tags"] = final.apply(lambda row: get_top_tags(row.user_id, row.artist_id), axis = 1)
+final[["tag1", "tag2", "tag3", "tag4", "tag5"]] = final["top_5_tags"].apply(pd.Series)
+final.drop("top_5_tags", axis = 1, inplace = True)
+final = final[["user_id", "tag1", "tag2", "tag3", "tag4", "tag5", "artist_id"]]
+final.to_csv("final.csv")
