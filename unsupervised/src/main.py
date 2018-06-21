@@ -1,5 +1,8 @@
 import codecs
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns; sns.set()  # for plot styling
 from sklearn.cluster import KMeans
 
 uta = pd.read_table("../data/user_taggedartists-timestamps.dat", sep="\t", header=0, names=["userID", "artistsID", "tagID","timestamp"])
@@ -46,7 +49,7 @@ def achatags(artista):
 
 
 utaAgrupado = utajoin2.groupby(["name", "value"]).size().reset_index(name='count')
-col = ['Artista','Tag1','Tag2','Tag3','Tag4','Tag5','Tag6','Tag7','Tag8','Tag9','Tag10']
+col = ['Artista', 'Tag1', 'Tag2', 'Tag3', 'Tag4', 'Tag5', 'Tag6', 'Tag7', 'Tag8', 'Tag9', 'Tag10']
 
 
 
@@ -78,32 +81,53 @@ def produzdf2():
     tag_popularities = tag_popularities[["tagID", "value", "uses", "popularity"]]
     tag_popularities.to_csv("../unsupervised/data/toptags.csv", sep=',')
 
+
 def produzdf3(ntags):
-    top_tags = pd.read_csv("../unsupervised/data/toptags.csv", sep=',')
+    top_tags = pd.read_csv("../data/toptags.csv", sep=',')
     top_tags = top_tags.drop(["Unnamed: 0"],axis=1)
     top_tags = top_tags.head(n=ntags)
     return top_tags
 
-col4 = ["Artista","rock","pop","alternative","eletronic","indie","female vocalist","80s","dance","alternative rock","classic rock"]
+
+col4 = ['Artista','rock', 'pop', 'alternative', 'electronic', 'indie', 'female vocalists', '80s', 'dance', 'alternative rock', 'classic rock', 'british', 'indie rock', 'singer-songwriter', 'hard rock', 'experimental', 'metal', 'ambient', '90s', 'new wave', 'seen live', 'chillout', 'hip-hop', 'punk', 'folk', 'electronica', 'rnb', 'instrumental', 'heavy metal', 'soul', 'acoustic', 'progressive rock', '70s', 'jazz', 'soundtrack', 'male vocalists', 'industrial', 'trip-hop', 'metalcore', 'rap', 'synthpop', 'american', 'hardcore', 'indie pop', 'pop rock', '00s', 'britpop', 'post-punk', '60s', 'punk rock', 'blues', 'psychedelic', 'downtempo', 'beautiful', 'sexy', 'thrash metal', 'idm', 'post-rock', 'electro', 'awesome', 'love', 'mellow', 'cover', 'death metal', 'female vocalist', 'post-hardcore', 'brazilian', 'amazing', 'pop punk', 'country', 'ebm', 'progressive metal', 'emo', 'hip hop', 'piano', 'screamo', 'trance', 'funk', 'classical', 'nu metal', 'favorites', 'melodic death metal', 'gothic', 'grunge', 'house', 'german', 'female', 'canadian', 'power metal', 'techno', 'ballad', 'uk', '<3', 'love at first listen', 'cool', 'french', 'catchy', 'deathcore', 'japanese', 'synth pop', 'sad', 'latin', 'usa', 'shoegaze', 'reggae', 'brasil', 'black metal', 'epic', 'gothic metal', 'electropop', 'world', 'favorite', 'blues rock', 'mpb', 'minimal', 'oldies', 'progressive', 'lounge', 'covers', 'darkwave', 'disco', 'classic', 'symphonic metal', 'new age', 'avant-garde', 'guitar', 'dream pop', 'atmospheric', 'lo-fi', 'noise', 'psychedelic rock', 'fun', 'happy', 'j-pop', 'alternative metal', 'swedish', 'industrial metal', 'christian', 'soft rock', 'chill', 'remix', 'romantic', 'favorite songs', 'english', 'ska', 'rock n roll', 'spanish', 'rock and roll', 'urban', 'j-rock', 'grindcore', 'russian', 'legend', 'sweet', 'dreamy', 'dark electro', 'garage rock', 'polish', 'futurepop', 'christian rock', 'gothic rock', 'doom metal', 'hair metal', 'melancholic', 'disney', 'hot', 'powerpop', 'glam rock', 'relax', 'party', 'relaxing', 'dark ambient', 'perfect', 'brazil', 'new romantic', 'italian', 'icelandic', 'emocore', '2008', 'mathcore', 'love songs', 'love it', 'fucking awesome', 'ethereal', 'guilty pleasures', '50s', 'southern rock', 'electroclash', 'speed metal', 'australian', 'dub', 'easy listening', 'bossa nova', 'favourites', 'guilty pleasure', 'cute', 'christmas', 'diva', 'brutal death metal', 'psytrance', 'male vocalist']
 def produzdf4():
     resp = pd.DataFrame(columns=col4)
     i = 1
-    top_tags = produzdf3(10)
+    top_tags = produzdf3(200)
+    print(top_tags["value"].tolist())
     for index, row in artists.iterrows():
-        tagsBool = [row["name"]]
+        tagsbool = [row["name"]]
         utaagrupado2 = utaAgrupado[utaAgrupado["name"] == row["name"]]
         lista_tags = utaagrupado2["value"].tolist()
         for indext, rowt in top_tags.iterrows():
             if rowt["value"] in lista_tags:
-                tagsBool.append(1)
+                tagsbool.append(1)
             else:
-                tagsBool.append(0)
-        resp.loc[len(resp)] = tagsBool
+                tagsbool.append(0)
+        if sum(tagsbool[1:]) > 0:
+            resp.loc[len(resp)] = tagsbool
         print(i)
         i=i+1
 
-    resp.to_csv("../unsupervised/data/tagsbool.csv", sep=',')
     print(resp.to_string)
+    resp.to_csv("../data/tagsbool200semzeros.csv", sep=',')
+
+
+def kmeans_artista_tags(ntags):
+
+    artistas = pd.read_csv("../data/tagsbool"+str(ntags)+"semzeros.csv", sep=',')
+    artistas = artistas.drop(["Unnamed: 0"], axis=1)
+    artistas = artistas.drop(["Artista"], axis=1)
+    art_array = artistas.values
+    kmeans = KMeans(n_clusters=20, random_state=0).fit(art_array)
+    #distance = kmeans.fit_transform(art_array)
+    #np.set_printoptions(threshold=np.nan)
+    artistas = pd.read_csv("../data/tagsbool" + str(ntags) + "semzeros.csv", sep=',')
+    artistas = artistas.drop(["Unnamed: 0"], axis=1)
+    artistas["cluster"] = kmeans.labels_
+    artistas = artistas.drop(['rock', 'pop', 'alternative', 'electronic', 'indie', 'female vocalists', '80s', 'dance', 'alternative rock', 'classic rock'], axis=1)
+    print(artistas.sort_values(by=['cluster']).to_string())
+
 
 def kmeans_lista_tags():
     lista_tags = pd.read_csv("../unsupervised/data/lista_tags_virgula.csv", sep=',')
@@ -113,7 +137,10 @@ def kmeans_lista_tags():
     kmeans = KMeans(n_clusters=10, random_state=0).fit(lt_array)
     print(kmeans)
 
-print(utaAgrupado)
+
+#print(utaAgrupado)
 #produzdf()
 #produzdf3()
 produzdf4()
+
+#kmeans_artista_tags(10)
