@@ -2,7 +2,6 @@ import codecs
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns; sns.set()  # for plot styling
 from sklearn.cluster import KMeans
 
 uta = pd.read_table("../data/user_taggedartists-timestamps.dat", sep="\t", header=0, names=["userID", "artistsID", "tagID","timestamp"])
@@ -141,6 +140,6 @@ def kmeans_lista_tags():
 #print(utaAgrupado)
 #produzdf()
 #produzdf3()
-produzdf4()
+#produzdf4()
 
-#kmeans_artista_tags(10)
+kmeans_artista_tags(10)
