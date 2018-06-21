@@ -10,6 +10,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neural_network import MLPClassifier
 
 
 """
@@ -60,33 +61,48 @@ def visualization(data: pd.DataFrame) -> pd.DataFrame:
 visual = visualization(data)
 
 """
+data cleaning
+"""
+blanks = data[(data["tag1"] == 0) & (data["tag2"] == 0) & (data["tag3"] == 0) & (data["tag4"] == 0) & (data["tag5"] == 0)]
+blank_percentage = int((len(blanks) / len(data)) * 100)
+old_len = len(data)
+data = data.drop(index = blanks.index, axis = 0)
+print(f"Dropping {len(blanks)} rows with no tags. ({blank_percentage}% of data)")
+print(f"Data had {old_len} rows, now has {len(data)} rows.")
+print()
+
+
+"""
 machine learning!!
 """
 train: pd.DataFrame
 test: pd.DataFrame
-train, test = train_test_split(data, test_size = 0.2)
-X_train: pd.DataFrame = train.iloc[:, 0:-1] # features (user_id and tags) # TODO: only tags maybe?
+train, test = train_test_split(data, test_size = 0.3)
+X_train: pd.DataFrame = train.iloc[:, 1:-1] # tags
 y_train: pd.Series = train.iloc[:, -1] # only artist
-X_test: pd.DataFrame = test.iloc[:, 0:-1] # features
+X_test: pd.DataFrame = test.iloc[:, 1:-1] # tags
 y_test: pd.Series = test.iloc[:, -1] # only artist
 
+
 # KNN
-KNN = KNeighborsClassifier(n_neighbors = 7)
+KNN = KNeighborsClassifier()
 KNN.fit(X_train, y_train)
 knn_predictions = KNN.predict(X_test)
 
 knn_accuracy = accuracy_score(y_test, knn_predictions)
 print(f"KNN accuracy: {knn_accuracy}")
 
+
 # Decision Tree (MEMORY ERROR)
 """
-DT = DecisionTreeClassifier(max_depth = 20)
+DT = DecisionTreeClassifier(criterion = "entropy")
 DT.fit(X_train, y_train)
 dt_predictions = DT.predict(X_test)
 
 dt_accuracy = accuracy_score(y_test, dt_predictions)
 print(f"DT accuracy: {dt_accuracy}")
 """
+
 
 # Random Forest (MEMORY ERROR)
 """
@@ -106,4 +122,14 @@ gnb_predictions = GNB.predict(X_test)
 
 gnb_accuracy = accuracy_score(y_test, gnb_predictions)
 print(f"GNB accuracy: {gnb_accuracy}")
+"""
+
+# Multi-Layer Perceptron (MLP)
+"""
+MLP = MLPClassifier()
+MLP.fit(X_train, y_train)
+mlp_predictions = MLP.predict(X_test)
+
+mlp_accuracy = accuracy_score(y_test, mlp_predictions)
+print(f"MLP accuracy: {mlp_accuracy}")
 """
