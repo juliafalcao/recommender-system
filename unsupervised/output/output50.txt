@@ -1,4 +1,4 @@
-C:\Users\Pichau\AppData\Local\Programs\Python\Python36\python.exe "C:/Users/Pichau/Desktop/8 PERÍODO/unsupervised/src/main.py"
+
                                                 Artista  cluster
 3160                                             Tricky        0
 6211                                            Corpore        0
@@ -9289,4 +9289,4 @@ C:\Users\Pichau\AppData\Local\Programs\Python\Python36\python.exe "C:/Users/Pich
 3790                                         João Bosco       99
 2685                                          Jake Owen       99
 
-Process finished with exit code 0
+
