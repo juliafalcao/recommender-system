@@ -1,4 +1,4 @@
-C:\Users\Pichau\AppData\Local\Programs\Python\Python36\python.exe "C:/Users/Pichau/Desktop/8 PERÍODO/unsupervised/src/main.py"
+
                                                  Artista  cluster
 718                                               Slayer        0
 7283                                               Razor        0
@@ -10779,4 +10779,4 @@ C:\Users\Pichau\AppData\Local\Programs\Python\Python36\python.exe "C:/Users/Pich
 3157                                            Haddaway      499
 3138                                      Jenny Berggren      499
 
-Process finished with exit code 0
+
