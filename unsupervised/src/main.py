@@ -112,34 +112,50 @@ def produzdf4():
     resp.to_csv("../data/tagsbool200semzeros.csv", sep=',')
 
 
-def kmeans_artista_tags(ntags):
+def kmeans_artista_tags(usuario_tags,ntags):
 
     artistas = pd.read_csv("../data/tagsbool"+str(ntags)+"semzeros.csv", sep=',')
     artistas = artistas.drop(["Unnamed: 0"], axis=1)
+    artistas = artistas.append(usuario_tags,ignore_index=True)
+    print(artistas)
     artistas = artistas.drop(["Artista"], axis=1)
     art_array = artistas.values
-    kmeans = KMeans(n_clusters=20, random_state=0).fit(art_array)
+    kmeans = KMeans(n_clusters=100, random_state=0).fit(art_array)
     #distance = kmeans.fit_transform(art_array)
     #np.set_printoptions(threshold=np.nan)
     artistas = pd.read_csv("../data/tagsbool" + str(ntags) + "semzeros.csv", sep=',')
     artistas = artistas.drop(["Unnamed: 0"], axis=1)
+    artistas = artistas.append(usuario_tags,ignore_index=True)
     artistas["cluster"] = kmeans.labels_
-    artistas = artistas.drop(['rock', 'pop', 'alternative', 'electronic', 'indie', 'female vocalists', '80s', 'dance', 'alternative rock', 'classic rock'], axis=1)
-    print(artistas.sort_values(by=['cluster']).to_string())
+    artistas = artistas.drop(artistas.columns[1:51], axis=1)
+    artistas.sort_values(by=['cluster']).to_csv("../output/recomendacao-id2-c100-t50.csv",sep=",")
 
+def usuario_top_tags():
+    usuarios = pd.read_table("../data/user_artists.dat", sep="\t", header=0, names=["userID", "artistsID", "weight"])
+    ua = pd.merge(usuarios,artists,on=['artistsID',"artistsID"])
+    tags = pd.read_csv("../data/tagsbool50.csv", sep=',')
+    tags = tags.drop(["Unnamed: 0"], axis=1)
+    uat = pd.merge(ua, tags, how='inner', left_on='name', right_on='Artista')
+    uat = uat.sort_values(by=["userID", "weight"], ascending=[True, False])
+    uat = uat.drop(["name"],axis=1)
+    uat.to_csv("../data/usuario_artista_tag.csv", sep=',')
 
-def kmeans_lista_tags():
-    lista_tags = pd.read_csv("../unsupervised/data/lista_tags_virgula.csv", sep=',')
-    lista_tags = lista_tags.drop(["ID"], axis=1)
-    lt_array = lista_tags.values
-    print(lt_array)
-    kmeans = KMeans(n_clusters=10, random_state=0).fit(lt_array)
-    print(kmeans)
-
+def recomenda(id,ntags):
+    usuario = pd.read_csv("../data/usuario_artista_tag.csv", sep=',')
+    usuario = usuario.drop(["Unnamed: 0"], axis=1)
+    usuario = usuario[usuario["userID"] == id]
+    usuario = usuario.drop(["artistsID","weight","Artista"], axis=1)
+    usuario_tags = usuario.loc[[0]]
+    new_columns = usuario_tags.columns.tolist()
+    new_columns[0] = 'Artista'
+    usuario_tags.columns = new_columns
+    kmeans_artista_tags(usuario_tags,ntags)
+    #artistas = kmeans_artista_tags(ntags)
 
 #print(utaAgrupado)
 #produzdf()
 #produzdf3()
 #produzdf4()
 
-kmeans_artista_tags(10)
+#kmeans_artista_tags(50)
+recomenda(2,50)
