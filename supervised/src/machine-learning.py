@@ -11,6 +11,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import confusion_matrix
 
 
 """
@@ -21,12 +22,12 @@ artists = artists.drop(["image"], axis = 1)
 
 with codecs.open("../data/tags.dat", encoding = "utf-8", errors = "replace") as f:
     # to avoid encoding error b/c of non utf-8 characters
-    tags = pd.read_table(f, sep = "\t", header = 0, names = ["tagid", "tag"])
+    tags = pd.read_table(f, sep = "\t", header = 0, names = ["tag_id", "tag"])
 f.close()
 
 user_artists = pd.read_table("../data/user_artists.dat", sep = "\t", header = 0, names = ["user_id", "artist_id", "listen_count"])
 
-user_tagged_artists = pd.read_table("../data/user_taggedartists.dat", sep = "\t", header = 0, names = ["user_id", "artist_id", "tagid", "day", "month", "year"])
+user_tagged_artists = pd.read_table("../data/user_taggedartists.dat", sep = "\t", header = 0, names = ["user_id", "artist_id", "tag_id", "day", "month", "year"])
 user_tagged_artists = user_tagged_artists.drop(["day", "month", "year"], axis = 1)
 uta = user_tagged_artists
 
@@ -34,42 +35,7 @@ uta = user_tagged_artists
 final generated table
 user_id / tag1 / tag2 / tag3 / tag4 / tag5 / artist_id
 """
-data = pd.read_csv("final.csv", header = 0, names = ["user_id", "tag1", "tag2", "tag3", "tag4", "tag5", "artist_id"])
-
-"""
-Function that replaces tag and artist IDs with names for better visualization of the data.
-"""
-def visualization(data: pd.DataFrame) -> pd.DataFrame:
-    data = data.merge(tags, left_on = "tag1", right_on = "tagid")
-    data = data.drop("tag1", axis = 1).rename(columns = {"tag": "tag1"})
-    data = data.merge(tags, left_on = "tag2", right_on = "tagid")
-    data = data.drop("tag2", axis = 1).rename(columns = {"tag": "tag2"})
-    data = data.merge(tags, left_on = "tag3", right_on = "tagid")
-    data = data.drop("tag3", axis = 1).rename(columns = {"tag": "tag3"})
-    data = data.merge(tags, left_on = "tag4", right_on = "tagid")
-    data = data.drop("tag4", axis = 1).rename(columns = {"tag": "tag4"})
-    data = data.merge(tags, left_on = "tag5", right_on = "tagid")
-    data = data.drop("tag5", axis = 1).rename(columns = {"tag": "tag5"})
-    data = data.merge(artists, on = "artist_id")
-    data = data.drop("artist_id", axis = 1).rename(columns = {"name": "artist_name"})
-    data = data[["user_id", "tag1", "tag2", "tag3", "tag4", "tag5", "artist_name"]]
-    data.sort_values(by = "user_id")
-    
-    return data
-
-
-visual = visualization(data)
-
-"""
-data cleaning
-"""
-blanks = data[(data["tag1"] == 0) & (data["tag2"] == 0) & (data["tag3"] == 0) & (data["tag4"] == 0) & (data["tag5"] == 0)]
-blank_percentage = int((len(blanks) / len(data)) * 100)
-old_len = len(data)
-data = data.drop(index = blanks.index, axis = 0)
-print(f"Dropping {len(blanks)} rows with no tags. ({blank_percentage}% of data)")
-print(f"Data had {old_len} rows, now has {len(data)} rows.")
-print()
+data = pd.read_csv("final.csv", header = 0)
 
 
 """
@@ -78,10 +44,12 @@ machine learning!!
 train: pd.DataFrame
 test: pd.DataFrame
 train, test = train_test_split(data, test_size = 0.3)
-X_train: pd.DataFrame = train.iloc[:, 1:-1] # tags
-y_train: pd.Series = train.iloc[:, -1] # only artist
-X_test: pd.DataFrame = test.iloc[:, 1:-1] # tags
-y_test: pd.Series = test.iloc[:, -1] # only artist
+
+# columns: 0 = user_id, 1 = artist_id, 2... = tags
+X_train: pd.DataFrame = train.iloc[:, 2:] # all tags
+y_train: pd.Series = train.iloc[:, 1] # only artist
+X_test: pd.DataFrame = test.iloc[:, 2:] # all tags
+y_test: pd.Series = test.iloc[:, 1] # only artist
 
 
 # KNN
@@ -123,6 +91,7 @@ gnb_predictions = GNB.predict(X_test)
 gnb_accuracy = accuracy_score(y_test, gnb_predictions)
 print(f"GNB accuracy: {gnb_accuracy}")
 """
+
 
 # Multi-Layer Perceptron (MLP)
 """
