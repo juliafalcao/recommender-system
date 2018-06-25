@@ -1,104 +1,99 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import codecs
-import typing
+import codecs, typing, os
+
+from data_manipulation import *
 
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import mean_squared_error
+from sklearn.neighbors import KNeighborsRegressor
+
 from sklearn.metrics import confusion_matrix
 
 
 """
-dataset
+dataset (after data cleaning)
 """
-artists = pd.read_table("../data/artists.dat", sep = "\t", header = 0, names = ["artist_id", "name", "url", "image"])
-artists = artists.drop(["image"], axis = 1)
+artists = pd.read_csv("../data/cleaned_artists.csv", header = 0, index_col = "Unnamed: 0")
 
-with codecs.open("../data/tags.dat", encoding = "utf-8", errors = "replace") as f:
+with codecs.open("../data/cleaned_tags.csv", encoding = "utf-8", errors = "replace") as f:
     # to avoid encoding error b/c of non utf-8 characters
-    tags = pd.read_table(f, sep = "\t", header = 0, names = ["tag_id", "tag"])
+    tags = pd.read_table(f, sep = ",", header = 0, index_col = "Unnamed: 0")
 f.close()
 
-user_artists = pd.read_table("../data/user_artists.dat", sep = "\t", header = 0, names = ["user_id", "artist_id", "listen_count"])
+user_artists = pd.read_csv("../data/cleaned_user_artists.csv", header = 0, index_col = "Unnamed: 0")
+all_users = set(user_artists["user_id"])
 
-user_tagged_artists = pd.read_table("../data/user_taggedartists.dat", sep = "\t", header = 0, names = ["user_id", "artist_id", "tag_id", "day", "month", "year"])
-user_tagged_artists = user_tagged_artists.drop(["day", "month", "year"], axis = 1)
+# user_tagged_artists = pd.read_table("../data/user_taggedartists.dat", sep = "\t", header = 0, names = ["user_id", "artist_id", "tag_id", "day", "month", "year"])
+# user_tagged_artists = user_tagged_artists.drop(["day", "month", "year"], axis = 1)
+
+user_tagged_artists = pd.read_csv("../data/cleaned_user_tagged_artists.csv", header = 0, index_col = "Unnamed: 0")
 uta = user_tagged_artists
 
-"""
-final generated table
-user_id / tag1 / tag2 / tag3 / tag4 / tag5 / artist_id
-"""
-data = pd.read_csv("final.csv", header = 0)
-
 
 """
-machine learning!!
+Function that receives an user ID and prints the top 5 artist recommendations for that user.
 """
-train: pd.DataFrame
-test: pd.DataFrame
-train, test = train_test_split(data, test_size = 0.3)
+def recommend_for_user(user: int):
+    # check if user exists in dataset
+    if user not in all_users:
+        print(f"ERROR: User {user} is not in the dataset.")
+        exit()
 
-# columns: 0 = user_id, 1 = artist_id, 2... = tags
-X_train: pd.DataFrame = train.iloc[:, 2:] # all tags
-y_train: pd.Series = train.iloc[:, 1] # only artist
-X_test: pd.DataFrame = test.iloc[:, 2:] # all tags
-y_test: pd.Series = test.iloc[:, 1] # only artist
-
-
-# KNN
-KNN = KNeighborsClassifier()
-KNN.fit(X_train, y_train)
-knn_predictions = KNN.predict(X_test)
-
-knn_accuracy = accuracy_score(y_test, knn_predictions)
-print(f"KNN accuracy: {knn_accuracy}")
+    """
+    get user table from csv file (cached) or generate it
+    """
+    if not os.path.exists(f"user-tables/user_{user}_table.csv"):
+        build_user_table(user)
+    
+    user_table = pd.read_csv(f"user-tables/user_{user}_table.csv", header = 0, index_col = "Unnamed: 0")
 
 
-# Decision Tree (MEMORY ERROR)
-"""
-DT = DecisionTreeClassifier(criterion = "entropy")
-DT.fit(X_train, y_train)
-dt_predictions = DT.predict(X_test)
+    """
+    machine learning!!
+    """
+    train: pd.DataFrame
+    test: pd.DataFrame
+    train, test = train_test_split(user_table, test_size = 0.2)
 
-dt_accuracy = accuracy_score(y_test, dt_predictions)
-print(f"DT accuracy: {dt_accuracy}")
-"""
+    # columns: 0 = artist_id, 1 through -2 = all tags (features), -1 = listen_% (target)
+    X_train: pd.DataFrame = train.iloc[:, 1:-1] # all tags
+    y_train: pd.Series = train.iloc[:, -1] # only target
+    X_test: pd.DataFrame = test.iloc[:, 1:-1] # all tags
+    y_test: pd.Series = test.iloc[:, -1] # only target
+
+    # KNN
+    KNN = KNeighborsRegressor()
+    KNN.fit(X_train, y_train)
+    knn_predictions = KNN.predict(X_test)
+
+    comparison = X_test
+    comparison["true"] = y_test
+    comparison["prediction"] = knn_predictions
+    comparison["error"] = abs(comparison["true"] - comparison["prediction"])
+
+    mse = mean_squared_error(y_test, knn_predictions)
+    print(f"mean squared error: {mse}")
+
+    print(comparison.head(10))
+
+    """
+    predicting for all artists
+    """
+    artists_table = pd.read_csv("../data/final_artists_table.csv", header = 0, index_col = "Unnamed: 0")
+
+    # print(artists_table.iloc[:5, :25].to_string())
+    
+    knn_all_predictions = KNN.predict(artists_table)
+    recommendations = pd.DataFrame({"artist_id": artists_table["artist_id"], "predicted_listen_%": knn_all_predictions})
+    recommendations = recommendations.merge(artists[["artist_id", "name"]], on = "artist_id")
+
+    recommendations.sort_values(by = "predicted_listen_%", ascending = False, inplace = True)
+    print(recommendations.head(20).to_string())
 
 
-# Random Forest (MEMORY ERROR)
-"""
-RF = RandomForestClassifier()
-RF.fit(X_train, y_train)
-rf_predictions = RF.predict(X_test)
+recommend_for_user(2)
 
-rf_accuracy = accuracy_score(y_test, rf_predictions)
-print(f"RF accuracy: {rf_accuracy}")
-"""
+        
 
-# Gaussian Naive-Bayes (MEMORY ERROR)
-"""
-GNB = GaussianNB()
-GNB.fit(X_train, y_train)
-gnb_predictions = GNB.predict(X_test)
-
-gnb_accuracy = accuracy_score(y_test, gnb_predictions)
-print(f"GNB accuracy: {gnb_accuracy}")
-"""
-
-
-# Multi-Layer Perceptron (MLP)
-"""
-MLP = MLPClassifier()
-MLP.fit(X_train, y_train)
-mlp_predictions = MLP.predict(X_test)
-
-mlp_accuracy = accuracy_score(y_test, mlp_predictions)
-print(f"MLP accuracy: {mlp_accuracy}")
-"""
