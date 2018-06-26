@@ -18,7 +18,6 @@ user_tagged_artists: user_id / artist_id / tag_id / (day / month / year)
 
 ps.: all indexes are default (unnamed, starting from 0)
 """
-
 artists = pd.read_table("../data/artists.dat", sep = "\t", header = 0, names = ["artist_id", "name", "url", "image"])
 artists = artists.drop(["image"], axis = 1)
 
@@ -145,6 +144,7 @@ def build_user_table(user: int) -> pd.DataFrame:
     """
     iterate through artist tag pairs and mark 1 in final table where artist_id has tag_id
     """
+
     for row in artists.itertuples(index = False):
         user_table.at[row.artist_id, str(row.tag_id)] = 1
 
@@ -155,22 +155,27 @@ def build_user_table(user: int) -> pd.DataFrame:
     user_table["listen_%"] = user_table["listen_count"] / total_listen_count
     user_table.drop("listen_count", axis = 1, inplace = True)
 
-    user_table.to_csv(f"/user-tables/user_{user}_table.csv")
+    user_table.to_csv(f"user-tables/user_{user}_table.csv")
+
+build_user_table(10)
 
 """
 final table for all artists: artist_id / (932 tags)
 """
 
-artists_table = artists[["artist_id", "name"]]
+artists_table = artists.iloc[:, 0:2]
+print(artists_table.info())
 all_tags: list = [str(t) for t in tags["tag_id"]]
 artists_table = artists_table.reindex(columns = artists_table.columns.tolist() + all_tags, fill_value = 0)
-artists_table.set_index("artist_id", inplace = True)
 artists_table.drop("name", axis = 1, inplace = True)
+artists_table.set_index("artist_id", inplace = True)
+
 
 for row in artist_tags.itertuples(index = False):
     artists_table.at[row.artist_id, str(row.tag_id)] = 1
+    # ERRO: muda dtype das colunas de tags pra float ?????
 
-artists_table = artists_table.reset_index()
-artists_table.to_csv("../data/final_artists_table.csv")
+artists_table.reset_index(inplace = True)
 
-# TODO: change dtype of tag columns to int
+print(artists_table.iloc[:5, :5])
+# artists_table.to_csv("../data/final_artists_table.csv")

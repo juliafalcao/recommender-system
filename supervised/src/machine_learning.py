@@ -8,9 +8,7 @@ from data_manipulation import *
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.neighbors import KNeighborsRegressor
-
 from sklearn.metrics import confusion_matrix
-
 
 """
 dataset (after data cleaning)
@@ -66,6 +64,7 @@ def recommend_for_user(user: int):
     # KNN
     KNN = KNeighborsRegressor()
     KNN.fit(X_train, y_train)
+    """
     knn_predictions = KNN.predict(X_test)
 
     comparison = X_test
@@ -75,22 +74,22 @@ def recommend_for_user(user: int):
 
     mse = mean_squared_error(y_test, knn_predictions)
     print(f"mean squared error: {mse}")
-
     print(comparison.head(10))
+    """
 
     """
     predicting for all artists
     """
-    artists_table = pd.read_csv("../data/final_artists_table.csv", header = 0, index_col = "Unnamed: 0")
-
-    # print(artists_table.iloc[:5, :25].to_string())
+    artists_table = pd.read_csv("../data/final_artists_table_15.csv", header = 0, index_col = "Unnamed: 0")
+    print(artists_table.iloc[:5, :25].to_string())
     
-    knn_all_predictions = KNN.predict(artists_table)
+    knn_all_predictions = KNN.predict(artists_table.iloc[:, 1:])
     recommendations = pd.DataFrame({"artist_id": artists_table["artist_id"], "predicted_listen_%": knn_all_predictions})
     recommendations = recommendations.merge(artists[["artist_id", "name"]], on = "artist_id")
 
     recommendations.sort_values(by = "predicted_listen_%", ascending = False, inplace = True)
     print(recommendations.head(20).to_string())
+    
 
 
 recommend_for_user(2)
