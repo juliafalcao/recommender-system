@@ -4,7 +4,7 @@ from random import randint
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, DBSCAN
 
 uta = pd.read_table("../data/user_taggedartists-timestamps.dat", sep="\t", header=0, names=["userID", "artistsID", "tagID","timestamp"])
 uta = uta.drop(["timestamp"], axis=1)
@@ -113,6 +113,7 @@ def produzdf4():
     print(resp.to_string)
     resp.to_csv("../data/tagsbool200semzeros.csv", sep=',')
 
+##AS FUNCOES DAQUI PRA CIMA PODEM SER IGNORADAS, FORAM PARA PRE PROCESSAMENTO
 
 def kmeans_artista_tags(usuario_tags,ntags,ncluster):
 
@@ -130,7 +131,7 @@ def kmeans_artista_tags(usuario_tags,ntags,ncluster):
     artistas["cluster"] = kmeans.labels_
     artistas = artistas.drop(artistas.columns[1:51], axis=1)
     user_id = usuario_tags["Artista"].tolist()[0]
-    artistas.sort_values(by=['cluster']).to_csv("../output/recomendacao-id"+str(user_id)+"-c"+str(ncluster)+"-t"+str(ntags)+".csv",sep=",")
+    artistas.sort_values(by=['cluster']).to_csv("../output/recomendacao-kmeans-id"+str(user_id)+"-c"+str(ncluster)+"-t"+str(ntags)+".csv",sep=",")
     user = artistas[artistas["Artista"]==user_id]
     user_c = user["cluster"].tolist()[0]
     cluster_user = artistas[artistas["cluster"]==user_c]
@@ -155,7 +156,7 @@ def usuario_top_tags():
     uat = uat.drop(["name"],axis=1)
     uat.to_csv("../data/usuario_artista_tag.csv", sep=',')
 
-def recomenda(id,ntags,ncluster):
+def recomenda_kmeans(id,ntags,ncluster):
     usuario = pd.read_csv("../data/usuario_artista_tag.csv", sep=',')
     usuario = usuario.drop(["Unnamed: 0"], axis=1)
     usuario = usuario[usuario["userID"] == id]
@@ -168,10 +169,53 @@ def recomenda(id,ntags,ncluster):
     kmeans_artista_tags(usuario_tags,ntags,ncluster)
     #artistas = kmeans_artista_tags(ntags)
 
+def dbscan_artista_tags(usuario_tags,ntags):
+
+    artistas = pd.read_csv("../data/tagsbool"+str(ntags)+"semzeros.csv", sep=',')
+    artistas = artistas.drop(["Unnamed: 0"], axis=1)
+    artistas = artistas.append(usuario_tags,ignore_index=True)
+    artistas = artistas.drop(["Artista"], axis=1)
+    art_array = artistas.values
+    dbscan = DBSCAN(eps=0.95, min_samples=30).fit(art_array)
+    #distance = kmeans.fit_transform(art_array)
+    #np.set_printoptions(threshold=np.nan)
+    artistas = pd.read_csv("../data/tagsbool" + str(ntags) + "semzeros.csv", sep=',')
+    artistas = artistas.drop(["Unnamed: 0"], axis=1)
+    artistas = artistas.append(usuario_tags,ignore_index=True)
+    artistas["cluster"] = dbscan.labels_
+    artistas = artistas.drop(artistas.columns[1:51], axis=1)
+    user_id = usuario_tags["Artista"].tolist()[0]
+    artistas.sort_values(by=['cluster']).to_csv("../output/recomendacao-dbscan-id"+str(user_id)+"-t"+str(ntags)+".csv",sep=",")
+    user = artistas[artistas["Artista"]==user_id]
+    user_c = user["cluster"].tolist()[0]
+    cluster_user = artistas[artistas["cluster"]==user_c]
+    cluster_user = cluster_user.reset_index(drop=True)
+    recomendacoes = []
+    i = 0
+    while i <= 4:
+        r = randint(0, len(cluster_user.index)-2)
+        if r not in recomendacoes:
+            recomendacoes.append(r)
+            i += 1
+
+    print(cluster_user.iloc[recomendacoes])
+
+def recomenda_dbscan(id, ntags):
+    usuario = pd.read_csv("../data/usuario_artista_tag.csv", sep=',')
+    usuario = usuario.drop(["Unnamed: 0"], axis=1)
+    usuario = usuario[usuario["userID"] == id]
+    usuario = usuario.drop(["artistsID", "weight", "Artista"], axis=1)
+    usuario = usuario.reset_index(drop=True)
+    usuario_tags = usuario.loc[[0]]
+    new_columns = usuario_tags.columns.tolist()
+    new_columns[0] = 'Artista'
+    usuario_tags.columns = new_columns
+    dbscan_artista_tags(usuario_tags, ntags)
+
 #print(utaAgrupado)
 #produzdf()
 #produzdf3()
 #produzdf4()
 
 #kmeans_artista_tags(50)
-recomenda(2,50,100)
+recomenda_dbscan(63,50)
