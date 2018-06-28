@@ -31,7 +31,7 @@ user_tagged_artists = pd.read_table("../data/user_taggedartists.dat", sep = "\t"
 user_tagged_artists = user_tagged_artists.drop(["day", "month", "year"], axis = 1)
 uta = user_tagged_artists
 
-
+"""
 print("\nARTISTS")
 print(artists.head().to_string())
 print("\nTAGS")
@@ -40,6 +40,8 @@ print("\nUSER ARTISTS")
 print(user_artists.head().to_string())
 print("\nUSER TAGGED ARTISTS")
 print(uta.head().to_string())
+"""
+
 
 """
 data cleaning (0)
