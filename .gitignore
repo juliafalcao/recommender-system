@@ -2,3 +2,4 @@
 data/
 .python-version
 .vscode/
+supervised/src/__pycache__/
