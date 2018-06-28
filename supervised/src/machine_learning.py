@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -46,6 +48,8 @@ def recommend_for_user(user: int):
         build_user_table(user)
     
     user_table = pd.read_csv(f"../data/user-tables/user_{user}_table.csv", header = 0, index_col = "Unnamed: 0")
+
+    print(user_table.head(50))
 
     """
     machine learning!!
@@ -115,20 +119,22 @@ def recommend_for_user(user: int):
     comparison.sort_values(by = "artist_id", inplace = True)
     print(comparison.to_string())
 
-    exit()
+    # predicting for all artists
 
-    """
-    predicting for all artists
-    """
     artists_table = pd.read_csv("../data/final_artists_table.csv", header = 0, index_col = "Unnamed: 0")
-    print(artists_table.iloc[:5, :25].to_string())
     
-    knn_all_predictions = KNN.predict(artists_table.iloc[:, 1:]) # all artists, all tag columns
-    recommendations = pd.DataFrame({"artist_id": artists_table["artist_id"], "predicted_listen_%": knn_all_predictions})
-    recommendations = recommendations.merge(artists[["artist_id", "name"]], on = "artist_id")
+    knn_prediction = KNN.predict(artists_table.iloc[:, 1:]) # all artists, all tag columns
+    knn_recommendation = pd.DataFrame({"artist_id": artists_table["artist_id"], "KNN prediction": knn_prediction})
+    knn_recommendation = knn_recommendation.merge(artists[["artist_id", "name"]], on = "artist_id")
+    knn_recommendation.sort_values(by = "KNN prediction", ascending = False, inplace = True)
 
-    recommendations.sort_values(by = "predicted_listen_%", ascending = False, inplace = True)
-    print(recommendations.head(50).to_string())
+    dt_prediction = DT.predict(artists_table.iloc[:, 1:])
+    dt_recommendation = pd.DataFrame({"artist_id": artists_table["artist_id"], "DT prediction": dt_prediction})
+    dt_recommendation = dt_recommendation.merge(artists[["artist_id", "name"]], on = "artist_id")
+    dt_recommendation.sort_values(by = "DT prediction", ascending = False, inplace = True)
+
+    print(dt_recommendation.head(50).to_string(), end = "\n\n")
+    print(dt_recommendation.head(50).to_string())
 
 
 """

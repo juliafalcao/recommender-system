@@ -31,7 +31,7 @@ user_tagged_artists = pd.read_table("../data/user_taggedartists.dat", sep = "\t"
 user_tagged_artists = user_tagged_artists.drop(["day", "month", "year"], axis = 1)
 uta = user_tagged_artists
 
-"""
+
 print("\nARTISTS")
 print(artists.head().to_string())
 print("\nTAGS")
@@ -40,7 +40,6 @@ print("\nUSER ARTISTS")
 print(user_artists.head().to_string())
 print("\nUSER TAGGED ARTISTS")
 print(uta.head().to_string())
-"""
 
 """
 data cleaning (0)
@@ -120,6 +119,7 @@ print(f"\tartists: from {before} to {len(artists)}")
 """
 saving cleaned dataframes
 """
+tags["tag"] = tags["tag"].map(lambda x: x.encode('unicode-escape').decode('utf-8')) # remove non utf-8 chars
 tags.to_csv("../data/cleaned/tags.csv")
 artists.to_csv("../data/cleaned/artists.csv")
 uta.to_csv("../data/cleaned/user_tagged_artists.csv")
@@ -134,6 +134,9 @@ all tags used for each artist (to help filling final dataframes)
 artist_tags = uta[["artist_id", "tag_id"]].drop_duplicates(keep = "first")
 artist_tags.sort_values(by = ["artist_id", "tag_id"], inplace = True)
 
+at = pd.DataFrame(artist_tags.groupby("artist_id")["tag_id"].count())
+at.reset_index(inplace = True)
+print(f"media: {at['tag_id'].mean()}")
 
 """
 function that generates the final table for one given user
