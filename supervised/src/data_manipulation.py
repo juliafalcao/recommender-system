@@ -121,7 +121,9 @@ print(f"\tartists: from {before} to {len(artists)}")
 """
 saving cleaned dataframes
 """
-tags["tag"] = tags["tag"].map(lambda x: x.encode('unicode-escape').decode('utf-8')) # remove non utf-8 chars
+# remove non-utf8 chars
+tags["tag"] = tags["tag"].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
+artists["name"] = artists["name"].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
 tags.to_csv("../data/cleaned/tags.csv")
 artists.to_csv("../data/cleaned/artists.csv")
 uta.to_csv("../data/cleaned/user_tagged_artists.csv")
@@ -149,7 +151,7 @@ user_table: artist_id / (932 tags)* / listen_%
     listen_%: listen count of the user to a certain artist, out of their total listen count
               to measure "how much the user likes the artist"
 
-ps.: function saves dataframe to a .csv file in /data/user-tables
+ps.: function saves dataframe to a .csv file in /data/generated-tables
 """
 def build_user_table(user: int) -> None:
     all_tags: list = [str(t) for t in tags["tag_id"]]
@@ -176,7 +178,7 @@ def build_user_table(user: int) -> None:
     user_table.drop("listen_count", axis = 1, inplace = True)
 
     # save .csv file
-    user_table.to_csv(f"../data/user-tables/user_{user}_table.csv")
+    user_table.to_csv(f"../data/generated-tables/user_{user}_table.csv")
 
     return
 
@@ -203,7 +205,7 @@ def build_final_artists_table():
     artists_table.reset_index(inplace = True)
 
     # save .csv file
-    artists_table.to_csv("../data/final_artists_table.csv")
+    artists_table.to_csv("../data/generated-tables/final_artists_table.csv")
 
     print("\n-- final artists table generated --")
 

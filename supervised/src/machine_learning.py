@@ -46,10 +46,10 @@ def recommend_for_user(user: int, n = 20):
     print(f"USER: {user}")
 
     # get user table from .csv file or generate it
-    if not os.path.exists(f"../data/user-tables/user_{user}_table.csv"):
+    if not os.path.exists(f"../data/generated-tables/user_{user}_table.csv"):
         build_user_table(user)
     
-    user_table = pd.read_csv(f"../data/user-tables/user_{user}_table.csv", header = 0, index_col = "Unnamed: 0")
+    user_table = pd.read_csv(f"../data/generated-tables/user_{user}_table.csv", header = 0, index_col = "Unnamed: 0")
 
     """
     machine learning!!
@@ -70,8 +70,10 @@ def recommend_for_user(user: int, n = 20):
     print(f"test data: {len(test)} samples")
 
     """ K-Nearest Neighbors """
-    k = 7
-    KNN = KNeighborsRegressor(n_neighbors = k)
+    k = 3
+    KNN = KNeighborsRegressor(n_neighbors = k, weights = "distance")
+    # uniform: 0.03, 0.01, 0.04, 0.03, 0.013
+    # distance: 0.04, 0.04, 0.016, 0.02, 0.008, 0.02
     print(f"\n-- K-Nearest Neighbors (k = {k}) --")
     KNN.fit(X_train, y_train)    
     knn_test = KNN.predict(X_test)
@@ -87,6 +89,8 @@ def recommend_for_user(user: int, n = 20):
     knn_results["error"] = abs(knn_results["listen_%"] - knn_results["prediction"])
     knn_results.sort_values(by = "artist_id", inplace = True)
     print(knn_results.to_string())
+
+    exit()
 
     # graph
     """
@@ -143,7 +147,7 @@ def recommend_for_user(user: int, n = 20):
 
     # predicting for all artists by merging recommendations from all 3 methods
 
-    artists_table = pd.read_csv("../data/final_artists_table.csv", header = 0, index_col = "Unnamed: 0")
+    artists_table = pd.read_csv("../data/generated-tables/final_artists_table.csv", header = 0, index_col = "Unnamed: 0")
 
     knn_prediction = KNN.predict(artists_table.iloc[:, 1:]) # all artists, all tag columns
     rf_prediction = KNN.predict(artists_table.iloc[:, 1:])
@@ -172,4 +176,4 @@ print(liked_artists.to_string())
 user = np.random.choice(list(all_users))
 # recommend_for_user(user)
 
-recommend_for_user(47)
+recommend_for_user(2)
