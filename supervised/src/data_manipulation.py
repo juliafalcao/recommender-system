@@ -44,7 +44,7 @@ print(uta.head().to_string())
 
 
 """
-data cleaning (0)
+data cleaning (1)
 removing artists that haven't been tagged by any users
 """
 print("-- preparing data -- ")
@@ -62,9 +62,25 @@ before = len(uta)
 uta = uta[(uta["artist_id"].isin(artists["artist_id"])) & (uta["artist_id"].isin(user_artists["artist_id"]))]
 print(f"\tuser-tag-artist pairs: from {before} to {len(uta)}")
 
+"""
+data cleaning (2)
+removing users who listen to the least artists
+"""
+artists_per_user = user_artists.groupby("user_id")["artist_id"].count()
+artists_per_user = pd.DataFrame(artists_per_user).reset_index()
+artists_per_user.rename(columns = {"artist_id": "artist_count"}, inplace = True)
+min_artists_per_user = 20
+users_to_keep = artists_per_user[artists_per_user["artist_count"] >= min_artists_per_user]
+users_to_keep = users_to_keep["user_id"]
+
+print(f"\ncleaning: removing users that have less than {min_artists_per_user} listened artists")
+before_pairs, before_users = len(user_artists), len(set(user_artists["user_id"]))
+user_artists = user_artists[user_artists["user_id"].isin(users_to_keep)]
+print(f"\tusers: from {before_users} to {len(users_to_keep)}")
+print(f"\tuser-artist pairs: from {before_pairs} to {len(user_artists)}")
 
 """
-data cleaning (1)
+data cleaning (3)
 removing least used tags
 """
 tag_uses = uta.groupby("tag_id")[["user_id", "artist_id"]].count()
@@ -90,7 +106,7 @@ artists = artists[artists["artist_id"].isin(uta["artist_id"])] # remove from art
 print(f"\tartists: from {before} to {len(artists)}")
 
 """
-data cleaning (2)
+data cleaning (4)
 removing least tagged artists
 """
 tags_per_artist = uta[["artist_id", "tag_id"]].drop_duplicates(keep = "first")
@@ -140,7 +156,6 @@ artist_tags.sort_values(by = ["artist_id", "tag_id"], inplace = True)
 
 at = pd.DataFrame(artist_tags.groupby("artist_id")["tag_id"].count())
 at.reset_index(inplace = True)
-print(f"media: {at['tag_id'].mean()}")
 
 """
 function that generates the final table for one given user
