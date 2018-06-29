@@ -63,13 +63,13 @@ uta = uta[(uta["artist_id"].isin(artists["artist_id"])) & (uta["artist_id"].isin
 print(f"\tuser-tag-artist pairs: from {before} to {len(uta)}")
 
 """
-data cleaning (2)
+data cleaning (2) 
 removing users who listen to the least artists
 """
 artists_per_user = user_artists.groupby("user_id")["artist_id"].count()
 artists_per_user = pd.DataFrame(artists_per_user).reset_index()
 artists_per_user.rename(columns = {"artist_id": "artist_count"}, inplace = True)
-min_artists_per_user = 20
+min_artists_per_user = 10
 users_to_keep = artists_per_user[artists_per_user["artist_count"] >= min_artists_per_user]
 users_to_keep = users_to_keep["user_id"]
 
@@ -138,7 +138,7 @@ print(f"\tartists: from {before} to {len(artists)}")
 saving cleaned dataframes
 """
 # remove non-utf8 chars
-tags["tag"] = tags["tag"].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
+tags["tag"] = tags["tag"].map(lambda x: x.encode('unicode-escape').decode('utf-8')) # TODO: consertar isso
 artists["name"] = artists["name"].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
 tags.to_csv("../data/cleaned/tags.csv")
 artists.to_csv("../data/cleaned/artists.csv")
@@ -153,9 +153,6 @@ all tags used for each artist (to help filling final dataframes)
 """
 artist_tags = uta[["artist_id", "tag_id"]].drop_duplicates(keep = "first")
 artist_tags.sort_values(by = ["artist_id", "tag_id"], inplace = True)
-
-at = pd.DataFrame(artist_tags.groupby("artist_id")["tag_id"].count())
-at.reset_index(inplace = True)
 
 """
 function that generates the final table for one given user

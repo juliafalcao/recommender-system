@@ -55,8 +55,6 @@ def recommend_for_user(user: int, n = 20):
     if user not in all_users:
         print(f"ERROR: User {user} is not in the dataset.")
         exit()
-    
-    print(f"USER: {user}")
 
     # get user table from .csv file or generate it
     if not os.path.exists(f"../data/generated-tables/user_{user}_table.csv"):
@@ -164,13 +162,11 @@ def recommend_for_user(user: int, n = 20):
     return
 
 
-liked_artists = user_artists[["user_id", "artist_id"]].merge(artists[["artist_id", "name"]], on = "artist_id")
+liked_artists = user_artists[["user_id", "artist_id"]].copy()
+liked_artists = liked_artists.merge(artists[["artist_id", "name"]], on = "artist_id")
 liked_artists.rename(columns = {"name": "artist_name"}, inplace = True)
 liked_artists.sort_values(by = "user_id", inplace = True)
-print(liked_artists[liked_artists["user_id"] == 47].to_string())
 
 # testing with random generated users
 user = np.random.choice(list(all_users))
-recommend_for_user(user, n = 30)
-
-# recommend_for_user(user = 47, n = 30)
+recommend_for_user(user, n = 5)
