@@ -3,3 +3,5 @@ data/
 .python-version
 .vscode/
 supervised/src/__pycache__/
+supervised/src/deprecated_main.py
+supervised/src/deprecated_data_manipulation.py
