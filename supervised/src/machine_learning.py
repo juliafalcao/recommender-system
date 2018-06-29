@@ -34,6 +34,19 @@ all_users = set(user_artists["user_id"])
 user_tagged_artists = pd.read_csv("../data/cleaned/user_tagged_artists.csv", header = 0, index_col = "Unnamed: 0")
 uta = user_tagged_artists
 
+
+def print_test_results(test: pd.DataFrame, y_prediction: pd.Series) -> None:
+    print("Test results:")
+    results = test[["artist_id", "listen_%"]].copy()
+    results.rename(columns = {"listen_%": "target"}, inplace = True)
+    results["prediction"] = y_prediction
+    results["error"] = abs(results["target"] - results["prediction"])
+    results = results.merge(artists[["artist_id", "name"]], on = "artist_id")
+    results.sort_values(by = "artist_id", inplace = True)
+    results = results[["artist_id", "name", "target", "prediction", "error"]]
+
+    print(results.to_string())
+
 """
 Function that receives an user ID and prints the top artist recommendations for that user.
 """
@@ -65,59 +78,37 @@ def recommend_for_user(user: int, n = 20):
     X_test: pd.DataFrame = test.iloc[:, 1:-1] # all tags
     y_test: pd.Series = test.iloc[:, -1] # only target
 
-    print(f"\n\n-- training models for user {user} --")
+    print(f"\n\n-- Training models for user {user} --")
     print(f"train data: {len(train)} samples")
     print(f"test data: {len(test)} samples")
 
     """ K-Nearest Neighbors """
     k = 3
     KNN = KNeighborsRegressor(n_neighbors = k, weights = "distance")
-    # uniform: 0.03, 0.01, 0.04, 0.03, 0.013
-    # distance: 0.04, 0.04, 0.016, 0.02, 0.008, 0.02
+
     print(f"\n-- K-Nearest Neighbors (k = {k}) --")
     KNN.fit(X_train, y_train)    
     knn_test = KNN.predict(X_test)
 
-    # metrics
     knn_mae = mean_absolute_error(y_test, knn_test)
     print(f"KNN mean absolute error: {knn_mae}")
+    print_test_results(test, knn_test)
 
-    print("test results:")
-    knn_results = test[["artist_id", "listen_%"]].copy()
-    knn_results.rename(columns = {"listen_%": "target"})
-    knn_results["prediction"] = knn_test
-    knn_results["error"] = abs(knn_results["listen_%"] - knn_results["prediction"])
-    knn_results.sort_values(by = "artist_id", inplace = True)
-    print(knn_results.to_string())
-
-    exit()
-
-    # graph
-    """
-    x_data = test["artist_id"]
-    plt.scatter(x_data, y_test, color = "darkturquoise", label = "Test data")
-    plt.scatter(x_data, knn_test, color = "crimson", label = "KNN prediction")
-    plt.title(f"KNN (user {user})")
-    plt.xlabel("Artist")
-    plt.ylabel("Listen %")
-    plt.legend()
-    # plt.show()
-    """
-
-    """ Random Forest Regressor """
-    print("\n-- Random Forest Regressor --")
-    RF = RandomForestRegressor()
+    """ Random Forest """
+    print("\n-- Random Forest --")
+    RF = RandomForestRegressor(n_estimators = 15)
     RF.fit(X_train, y_train)
     rf_test = RF.predict(X_test)
 
     rf_mae = mean_absolute_error(y_test, rf_test)
     print(f"RF mean absolute error: {rf_mae}")
+    print_test_results(test, rf_test)
 
 
-    """ Ada Boosted Decision Tree Regressor """
-    print("\n-- Ada Boosted Decision Tree Regressor --")
-    DT = DecisionTreeRegressor(criterion = "mse")
-    ABDT = AdaBoostRegressor(DecisionTreeRegressor(criterion = "mse"), n_estimators = 100)
+    """ Ada-Boosted Decision Tree """
+    print("\n-- Ada-Boosted Decision Tree --")
+    DT = DecisionTreeRegressor()
+    ABDT = AdaBoostRegressor(DecisionTreeRegressor(), n_estimators = 100)
 
     DT.fit(X_train, y_train)
     ABDT.fit(X_train, y_train)
@@ -130,20 +121,24 @@ def recommend_for_user(user: int, n = 20):
     print(f"ABDT mean absolute error: {abdt_mae}")
 
     if (abdt_mae >= dt_mae): # if ABDT performed worse than single DT, abandon it
-        print("Using single-estimator DT")
+        print("(Will use single Decision Tree for recommendations.)")
+        abdt_label = "Single Decision Tree"
         ABDT = DT
         abdt_test = dt_test
     
     else:
-        print("Using Ada-Boosted DT")
+        print("(Will use Ada-Boosted Decision Tree for recommendations.)")
 
-    print("ABDT Test Results:")
-    abdt_results = test[["artist_id", "listen_%"]].copy()
-    abdt_results.rename(columns = {"listen_%": "target"})
-    abdt_results["prediction"] = abdt_test
-    abdt_results["error"] = abs(abdt_results["listen_%"] - abdt_results["prediction"])
-    abdt_results.sort_values(by = "artist_id", inplace = True)
-    print(abdt_results.to_string())
+    print_test_results(test, abdt_test)
+
+    print("\nFinal results:")
+    print(f"method  mean absolute error")
+    print(f"KNN:    {knn_mae}")
+    print(f"RF:     {rf_mae}")
+    print(f"(AB)DT: {abdt_mae}")
+
+    best = "KNN" if (min(knn_mae, rf_mae, abdt_mae) == knn_mae) else "RF" if (min(knn_mae, rf_mae, abdt_mae) == rf_mae) else "(AB)DT" if (min(knn_mae, rf_mae, abdt_mae) == abdt_mae) else "?"
+    print(f"BEST: {best}")
 
     # predicting for all artists by merging recommendations from all 3 methods
 
@@ -153,27 +148,29 @@ def recommend_for_user(user: int, n = 20):
     rf_prediction = KNN.predict(artists_table.iloc[:, 1:])
     abdt_prediction = ABDT.predict(artists_table.iloc[:, 1:])
 
-    recommendations = pd.DataFrame.from_dict({"artist_id": artists_table["artist_id"], "KNN": knn_prediction, "RF": rf_prediction, "ABDT": abdt_prediction})
+    recommendations = pd.DataFrame.from_dict(data = {"artist_id": artists_table["artist_id"], "KNN": knn_prediction, "RF": rf_prediction, "(AB)DT": abdt_prediction})
     recommendations = recommendations.merge(artists[["artist_id", "name"]], on = "artist_id")
-    print(recommendations.head().to_string())
     recommendations.rename(columns = {"artist_id": "ID", "name": "Artist"}, inplace = True)
-    recommendations["Avg"] = (recommendations["KNN"] + recommendations["RF"] + recommendations["ABDT"]) / 3
+    recommendations["Avg"] = (recommendations["KNN"] + recommendations["RF"] + recommendations["(AB)DT"]) / 3
     recommendations["New?"] =  ~(recommendations["ID"].isin(user_table["artist_id"]))
     recommendations.sort_values(by = "Avg", ascending = False, inplace = True)
-    recommendations = recommendations[["ID", "Artist", "New?", "KNN", "RF", "ABDT", "Avg"]]
+    recommendations = recommendations[["ID", "Artist", "New?", "KNN", "RF", "(AB)DT", "Avg"]]
 
     print(f"\nTOP {n} RECOMMENDATIONS FOR USER {user}")
     print(recommendations.head(n).to_string())
 
-"""
+    # TODO: graph
+
+    return
+
+
 liked_artists = user_artists[["user_id", "artist_id"]].merge(artists[["artist_id", "name"]], on = "artist_id")
 liked_artists.rename(columns = {"name": "artist_name"}, inplace = True)
 liked_artists.sort_values(by = "user_id", inplace = True)
-print(liked_artists.to_string())
-"""
+print(liked_artists[liked_artists["user_id"] == 47].to_string())
 
 # testing with random generated users
 user = np.random.choice(list(all_users))
-# recommend_for_user(user)
+recommend_for_user(user, n = 30)
 
-recommend_for_user(2)
+# recommend_for_user(user = 47, n = 30)
