@@ -42,8 +42,9 @@ print("\nUSER TAGGED ARTISTS")
 print(uta.head().to_string())
 """
 
+
 """
-data cleaning (0)
+data cleaning (1)
 removing artists that haven't been tagged by any users
 """
 print("-- preparing data -- ")
@@ -61,9 +62,25 @@ before = len(uta)
 uta = uta[(uta["artist_id"].isin(artists["artist_id"])) & (uta["artist_id"].isin(user_artists["artist_id"]))]
 print(f"\tuser-tag-artist pairs: from {before} to {len(uta)}")
 
+"""
+data cleaning (2) 
+removing users who listen to the least artists
+"""
+artists_per_user = user_artists.groupby("user_id")["artist_id"].count()
+artists_per_user = pd.DataFrame(artists_per_user).reset_index()
+artists_per_user.rename(columns = {"artist_id": "artist_count"}, inplace = True)
+min_artists_per_user = 10
+users_to_keep = artists_per_user[artists_per_user["artist_count"] >= min_artists_per_user]
+users_to_keep = users_to_keep["user_id"]
+
+print(f"\ncleaning: removing users that have less than {min_artists_per_user} listened artists")
+before_pairs, before_users = len(user_artists), len(set(user_artists["user_id"]))
+user_artists = user_artists[user_artists["user_id"].isin(users_to_keep)]
+print(f"\tusers: from {before_users} to {len(users_to_keep)}")
+print(f"\tuser-artist pairs: from {before_pairs} to {len(user_artists)}")
 
 """
-data cleaning (1)
+data cleaning (3)
 removing least used tags
 """
 tag_uses = uta.groupby("tag_id")[["user_id", "artist_id"]].count()
@@ -89,7 +106,7 @@ artists = artists[artists["artist_id"].isin(uta["artist_id"])] # remove from art
 print(f"\tartists: from {before} to {len(artists)}")
 
 """
-data cleaning (2)
+data cleaning (4)
 removing least tagged artists
 """
 tags_per_artist = uta[["artist_id", "tag_id"]].drop_duplicates(keep = "first")
@@ -120,6 +137,9 @@ print(f"\tartists: from {before} to {len(artists)}")
 """
 saving cleaned dataframes
 """
+# remove non-utf8 chars
+tags["tag"] = tags["tag"].map(lambda x: x.encode('unicode-escape').decode('utf-8')) # TODO: consertar isso
+artists["name"] = artists["name"].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
 tags.to_csv("../data/cleaned/tags.csv")
 artists.to_csv("../data/cleaned/artists.csv")
 uta.to_csv("../data/cleaned/user_tagged_artists.csv")
@@ -134,7 +154,6 @@ all tags used for each artist (to help filling final dataframes)
 artist_tags = uta[["artist_id", "tag_id"]].drop_duplicates(keep = "first")
 artist_tags.sort_values(by = ["artist_id", "tag_id"], inplace = True)
 
-
 """
 function that generates the final table for one given user
 (table used to train and test the machine learning algorithms)
@@ -144,7 +163,7 @@ user_table: artist_id / (932 tags)* / listen_%
     listen_%: listen count of the user to a certain artist, out of their total listen count
               to measure "how much the user likes the artist"
 
-ps.: function saves dataframe to a .csv file in /data/user-tables
+ps.: function saves dataframe to a .csv file in /data/generated-tables
 """
 def build_user_table(user: int) -> None:
     all_tags: list = [str(t) for t in tags["tag_id"]]
@@ -171,7 +190,7 @@ def build_user_table(user: int) -> None:
     user_table.drop("listen_count", axis = 1, inplace = True)
 
     # save .csv file
-    user_table.to_csv(f"../data/user-tables/user_{user}_table.csv")
+    user_table.to_csv(f"../data/generated-tables/user_{user}_table.csv")
 
     return
 
@@ -198,7 +217,7 @@ def build_final_artists_table():
     artists_table.reset_index(inplace = True)
 
     # save .csv file
-    artists_table.to_csv("../data/final_artists_table.csv")
+    artists_table.to_csv("../data/generated-tables/final_artists_table.csv")
 
     print("\n-- final artists table generated --")
 

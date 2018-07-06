@@ -9,7 +9,7 @@
 12,13,Hocico,http://www.last.fm/music/Hocico
 13,15,Dimmu Borgir,http://www.last.fm/music/Dimmu+Borgir
 14,16,London After Midnight,http://www.last.fm/music/London+After+Midnight
-16,18,The Crüxshadows,http://www.last.fm/music/The+Cr%C3%BCxshadows
+16,18,The Cr\xfcxshadows,http://www.last.fm/music/The+Cr%C3%BCxshadows
 17,19,:wumpscut:,http://www.last.fm/music/%3Awumpscut%3A
 23,25,Cradle of Filth,http://www.last.fm/music/Cradle+of+Filth
 24,26,Tamtrum,http://www.last.fm/music/Tamtrum
@@ -37,7 +37,7 @@
 55,61,Talk Talk,http://www.last.fm/music/Talk+Talk
 56,62,Prefab Sprout,http://www.last.fm/music/Prefab+Sprout
 57,63,Enigma,http://www.last.fm/music/Enigma
-58,64,Röyksopp,http://www.last.fm/music/R%C3%B6yksopp
+58,64,R\xf6yksopp,http://www.last.fm/music/R%C3%B6yksopp
 59,65,Coldplay,http://www.last.fm/music/Coldplay
 60,66,Faithless,http://www.last.fm/music/Faithless
 61,67,Madonna,http://www.last.fm/music/Madonna
@@ -46,7 +46,7 @@
 64,70,Moby,http://www.last.fm/music/Moby
 65,71,Dido,http://www.last.fm/music/Dido
 66,72,Depeche Mode,http://www.last.fm/music/Depeche+Mode
-67,73,Café Del Mar,http://www.last.fm/music/Caf%C3%A9+Del+Mar
+67,73,Caf\xe9 Del Mar,http://www.last.fm/music/Caf%C3%A9+Del+Mar
 69,75,Camouflage,http://www.last.fm/music/Camouflage
 70,76,Electronic,http://www.last.fm/music/Electronic
 71,77,George Michael,http://www.last.fm/music/George+Michael
@@ -167,11 +167,11 @@
 254,260,Floetry,http://www.last.fm/music/Floetry
 255,261,Marisa Monte,http://www.last.fm/music/Marisa+Monte
 256,262,Mary J. Blige,http://www.last.fm/music/Mary+J.+Blige
-259,265,Céline Dion,http://www.last.fm/music/C%C3%A9line+Dion
+259,265,C\xe9line Dion,http://www.last.fm/music/C%C3%A9line+Dion
 260,266,Erykah Badu,http://www.last.fm/music/Erykah+Badu
 261,267,Nas,http://www.last.fm/music/Nas
 262,268,Richard Marx,http://www.last.fm/music/Richard+Marx
-264,270,Maria Bethânia,http://www.last.fm/music/Maria+Beth%C3%A2nia
+264,270,Maria Beth\xe2nia,http://www.last.fm/music/Maria+Beth%C3%A2nia
 265,271,Mos Def,http://www.last.fm/music/Mos+Def
 266,272,Faith Evans,http://www.last.fm/music/Faith+Evans
 269,275,Angie Stone,http://www.last.fm/music/Angie+Stone
@@ -188,7 +188,7 @@
 286,292,Christina Aguilera,http://www.last.fm/music/Christina+Aguilera
 287,293,Ashlee Simpson,http://www.last.fm/music/Ashlee+Simpson
 288,294,Leona Lewis,http://www.last.fm/music/Leona+Lewis
-289,295,Beyoncé,http://www.last.fm/music/Beyonc%C3%A9
+289,295,Beyonc\xe9,http://www.last.fm/music/Beyonc%C3%A9
 290,296,Sugababes,http://www.last.fm/music/Sugababes
 291,297,David Cook,http://www.last.fm/music/David+Cook
 292,298,Lily Allen,http://www.last.fm/music/Lily+Allen
@@ -244,19 +244,19 @@
 361,367,BIG BANG,http://www.last.fm/music/BIG+BANG
 364,370,Katatonia,http://www.last.fm/music/Katatonia
 365,371,Skillet,http://www.last.fm/music/Skillet
-368,374,宇多田ヒカル,http://www.last.fm/music/%E5%AE%87%E5%A4%9A%E7%94%B0%E3%83%92%E3%82%AB%E3%83%AB
-369,375,浜崎あゆみ,http://www.last.fm/music/%E6%B5%9C%E5%B4%8E%E3%81%82%E3%82%86%E3%81%BF
+368,374,\u5b87\u591a\u7530\u30d2\u30ab\u30eb,http://www.last.fm/music/%E5%AE%87%E5%A4%9A%E7%94%B0%E3%83%92%E3%82%AB%E3%83%AB
+369,375,\u6d5c\u5d0e\u3042\u3086\u307f,http://www.last.fm/music/%E6%B5%9C%E5%B4%8E%E3%81%82%E3%82%86%E3%81%BF
 370,376,UVERworld,http://www.last.fm/music/UVERworld
 371,377,Linkin Park,http://www.last.fm/music/Linkin+Park
 372,378,Evanescence,http://www.last.fm/music/Evanescence
-373,379,中島美嘉,http://www.last.fm/music/%E4%B8%AD%E5%B3%B6%E7%BE%8E%E5%98%89
+373,379,\u4e2d\u5cf6\u7f8e\u5609,http://www.last.fm/music/%E4%B8%AD%E5%B3%B6%E7%BE%8E%E5%98%89
 374,380,Blackmore's Night,http://www.last.fm/music/Blackmore%27s+Night
 377,383,Bad Religion,http://www.last.fm/music/Bad+Religion
 380,386,Cascada,http://www.last.fm/music/Cascada
 383,389,Enya,http://www.last.fm/music/Enya
 384,390,GACKT,http://www.last.fm/music/GACKT
 387,393,Super Junior,http://www.last.fm/music/Super+Junior
-393,399,嵐,http://www.last.fm/music/%E5%B5%90
+393,399,\u5d50,http://www.last.fm/music/%E5%B5%90
 397,403,The All-American Rejects,http://www.last.fm/music/The+All-American+Rejects
 399,405,The Rasmus,http://www.last.fm/music/The+Rasmus
 401,407,Akira Yamaoka,http://www.last.fm/music/Akira+Yamaoka
@@ -265,11 +265,11 @@
 406,412,blink-182,http://www.last.fm/music/blink-182
 410,416,The National,http://www.last.fm/music/The+National
 411,417,Cordel do Fogo Encantado,http://www.last.fm/music/Cordel+do+Fogo+Encantado
-412,418,Sigur Rós,http://www.last.fm/music/Sigur+R%C3%B3s
+412,418,Sigur R\xf3s,http://www.last.fm/music/Sigur+R%C3%B3s
 413,419,Tokyo Police Club,http://www.last.fm/music/Tokyo+Police+Club
 414,420,The Kills,http://www.last.fm/music/The+Kills
-415,421,Móveis Coloniais de Acaju,http://www.last.fm/music/M%C3%B3veis+Coloniais+de+Acaju
-416,422,Mombojó,http://www.last.fm/music/Momboj%C3%B3
+415,421,M\xf3veis Coloniais de Acaju,http://www.last.fm/music/M%C3%B3veis+Coloniais+de+Acaju
+416,422,Momboj\xf3,http://www.last.fm/music/Momboj%C3%B3
 417,423,Bat for Lashes,http://www.last.fm/music/Bat+for+Lashes
 418,424,The Strokes,http://www.last.fm/music/The+Strokes
 419,425,Yeah Yeah Yeahs,http://www.last.fm/music/Yeah+Yeah+Yeahs
@@ -284,19 +284,19 @@
 428,434,Spoon,http://www.last.fm/music/Spoon
 430,436,The Smashing Pumpkins,http://www.last.fm/music/The+Smashing+Pumpkins
 431,437,She & Him,http://www.last.fm/music/She%2B%2526%2BHim
-432,438,O Teatro Mágico,http://www.last.fm/music/O+Teatro+M%C3%A1gico
+432,438,O Teatro M\xe1gico,http://www.last.fm/music/O+Teatro+M%C3%A1gico
 433,439,Los Hermanos,http://www.last.fm/music/Los+Hermanos
 434,440,Animal Collective,http://www.last.fm/music/Animal+Collective
 435,441,Joy Division,http://www.last.fm/music/Joy+Division
 436,442,The Tallest Man on Earth,http://www.last.fm/music/The+Tallest+Man+on+Earth
 437,443,The Rakes,http://www.last.fm/music/The+Rakes
-438,444,múm,http://www.last.fm/music/m%C3%BAm
+438,444,m\xfam,http://www.last.fm/music/m%C3%BAm
 439,445,Bon Iver,http://www.last.fm/music/Bon+Iver
 440,446,Ra Ra Riot,http://www.last.fm/music/Ra+Ra+Riot
 441,447,Manu Chao,http://www.last.fm/music/Manu+Chao
 444,450,She Wants Revenge,http://www.last.fm/music/She+Wants+Revenge
 447,453,Silverchair,http://www.last.fm/music/Silverchair
-448,454,Jónsi,http://www.last.fm/music/J%C3%B3nsi
+448,454,J\xf3nsi,http://www.last.fm/music/J%C3%B3nsi
 449,455,Backstreet Boys,http://www.last.fm/music/Backstreet+Boys
 450,456,Jesse McCartney,http://www.last.fm/music/Jesse+McCartney
 451,457,Aaron Carter,http://www.last.fm/music/Aaron+Carter
@@ -347,7 +347,7 @@
 504,510,P.O.D.,http://www.last.fm/music/P.O.D.
 505,511,U2,http://www.last.fm/music/U2
 506,512,Deftones,http://www.last.fm/music/Deftones
-508,514,Ill Niño,http://www.last.fm/music/Ill+Ni%C3%B1o
+508,514,Ill Ni\xf1o,http://www.last.fm/music/Ill+Ni%C3%B1o
 509,515,Clan of Xymox,http://www.last.fm/music/Clan+of+Xymox
 511,517,Korn,http://www.last.fm/music/Korn
 512,518,Within Temptation,http://www.last.fm/music/Within+Temptation
@@ -408,7 +408,7 @@
 597,603,Aphex Twin,http://www.last.fm/music/Aphex+Twin
 598,604,Kings of Convenience,http://www.last.fm/music/Kings+of+Convenience
 599,605,Beastie Boys,http://www.last.fm/music/Beastie+Boys
-600,606,José González,http://www.last.fm/music/Jos%C3%A9+Gonz%C3%A1lez
+600,606,Jos\xe9 Gonz\xe1lez,http://www.last.fm/music/Jos%C3%A9+Gonz%C3%A1lez
 601,607,Jethro Tull,http://www.last.fm/music/Jethro+Tull
 602,608,Tortoise,http://www.last.fm/music/Tortoise
 603,609,Nick Drake,http://www.last.fm/music/Nick+Drake
@@ -430,7 +430,7 @@
 621,627,Saint Etienne,http://www.last.fm/music/Saint+Etienne
 623,629,of Montreal,http://www.last.fm/music/of+Montreal
 624,630,Neil Young,http://www.last.fm/music/Neil+Young
-625,631,Einstürzende Neubauten,http://www.last.fm/music/Einst%C3%BCrzende+Neubauten
+625,631,Einst\xfcrzende Neubauten,http://www.last.fm/music/Einst%C3%BCrzende+Neubauten
 626,632,Explosions in the Sky,http://www.last.fm/music/Explosions+in+the+Sky
 627,633,Ornette Coleman,http://www.last.fm/music/Ornette+Coleman
 635,641,Laura Pausini,http://www.last.fm/music/Laura+Pausini
@@ -455,7 +455,7 @@
 687,693,Hey Monday,http://www.last.fm/music/Hey+Monday
 690,696,The Pierces,http://www.last.fm/music/The+Pierces
 691,697,Sia,http://www.last.fm/music/Sia
-693,699,Esmée Denters,http://www.last.fm/music/Esm%C3%A9e+Denters
+693,699,Esm\xe9e Denters,http://www.last.fm/music/Esm%C3%A9e+Denters
 695,701,Shakira,http://www.last.fm/music/Shakira
 697,703,The xx,http://www.last.fm/music/The+xx
 698,704,The Pretty Reckless,http://www.last.fm/music/The+Pretty+Reckless
@@ -467,7 +467,7 @@
 704,710,Black Label Society,http://www.last.fm/music/Black+Label+Society
 705,711,Mark Knopfler,http://www.last.fm/music/Mark+Knopfler
 706,712,Dire Straits,http://www.last.fm/music/Dire+Straits
-708,714,Legião Urbana,http://www.last.fm/music/Legi%C3%A3o+Urbana
+708,714,Legi\xe3o Urbana,http://www.last.fm/music/Legi%C3%A3o+Urbana
 709,715,R.E.M.,http://www.last.fm/music/R.E.M.
 710,716,Kaiser Chiefs,http://www.last.fm/music/Kaiser+Chiefs
 711,717,Electric Light Orchestra,http://www.last.fm/music/Electric+Light+Orchestra
@@ -495,8 +495,8 @@
 746,755,65daysofstatic,http://www.last.fm/music/65daysofstatic
 747,756,Arovane,http://www.last.fm/music/Arovane
 748,757,Crystal Castles,http://www.last.fm/music/Crystal+Castles
-749,758,Психея,http://www.last.fm/music/%D0%9F%D1%81%D0%B8%D1%85%D0%B5%D1%8F
-751,760,LAKE R▲DIO,http://www.last.fm/music/LAKE+R%E2%96%B2DIO
+749,758,\u041f\u0441\u0438\u0445\u0435\u044f,http://www.last.fm/music/%D0%9F%D1%81%D0%B8%D1%85%D0%B5%D1%8F
+751,760,LAKE R\u25b2DIO,http://www.last.fm/music/LAKE+R%E2%96%B2DIO
 752,761,Asian Dub Foundation,http://www.last.fm/music/Asian+Dub+Foundation
 754,763,Mono,http://www.last.fm/music/Mono
 758,767,Gridlock,http://www.last.fm/music/Gridlock
@@ -514,7 +514,7 @@
 779,788,Fey,http://www.last.fm/music/Fey
 780,789,Dannii Minogue,http://www.last.fm/music/Dannii+Minogue
 781,790,Belinda,http://www.last.fm/music/Belinda
-783,792,Thalía,http://www.last.fm/music/Thal%C3%ADa
+783,792,Thal\xeda,http://www.last.fm/music/Thal%C3%ADa
 784,793,Hannah Montana,http://www.last.fm/music/Hannah+Montana
 785,794,A*Teens,http://www.last.fm/music/A%2ATeens
 786,795,Gloria Trevi,http://www.last.fm/music/Gloria+Trevi
@@ -523,7 +523,7 @@
 789,798,Geri Halliwell,http://www.last.fm/music/Geri+Halliwell
 791,800,Atomic Kitten,http://www.last.fm/music/Atomic+Kitten
 792,801,5ive,http://www.last.fm/music/5ive
-793,802,Anahí,http://www.last.fm/music/Anah%C3%AD
+793,802,Anah\xed,http://www.last.fm/music/Anah%C3%AD
 794,803,Five,http://www.last.fm/music/Five
 796,805,Parkway Drive,http://www.last.fm/music/Parkway+Drive
 797,806,Soilwork,http://www.last.fm/music/Soilwork
@@ -638,14 +638,14 @@
 958,967,Sixpence None the Richer,http://www.last.fm/music/Sixpence+None+the+Richer
 959,968,Armin van Buuren,http://www.last.fm/music/Armin+van+Buuren
 960,969,Kasabian,http://www.last.fm/music/Kasabian
-962,971,Zoé,http://www.last.fm/music/Zo%C3%A9
+962,971,Zo\xe9,http://www.last.fm/music/Zo%C3%A9
 963,972,t.A.T.u.,http://www.last.fm/music/t.A.T.u.
 966,975,Santana,http://www.last.fm/music/Santana
 968,977,At the Drive-In,http://www.last.fm/music/At+the+Drive-In
 969,978,Disturbed,http://www.last.fm/music/Disturbed
 970,979,Smash Mouth,http://www.last.fm/music/Smash+Mouth
 971,980,Yelle,http://www.last.fm/music/Yelle
-972,981,Emilíana Torrini,http://www.last.fm/music/Emil%C3%ADana+Torrini
+972,981,Emil\xedana Torrini,http://www.last.fm/music/Emil%C3%ADana+Torrini
 973,982,Foo Fighters,http://www.last.fm/music/Foo+Fighters
 976,985,Blondie,http://www.last.fm/music/Blondie
 977,986,Frank Sinatra,http://www.last.fm/music/Frank+Sinatra
@@ -669,7 +669,7 @@
 996,1005,Robert Palmer,http://www.last.fm/music/Robert+Palmer
 997,1006,The Fixx,http://www.last.fm/music/The+Fixx
 999,1008,Level 42,http://www.last.fm/music/Level+42
-1000,1009,Tiësto,http://www.last.fm/music/Ti%C3%ABsto
+1000,1009,Ti\xebsto,http://www.last.fm/music/Ti%C3%ABsto
 1004,1013,Ultravox,http://www.last.fm/music/Ultravox
 1005,1014,Erasure,http://www.last.fm/music/Erasure
 1006,1015,Berlin,http://www.last.fm/music/Berlin
@@ -714,7 +714,7 @@
 1058,1067,Red Flag,http://www.last.fm/music/Red+Flag
 1059,1068,Cook Da Books,http://www.last.fm/music/Cook+Da+Books
 1060,1069,The Frozen Autumn,http://www.last.fm/music/The+Frozen+Autumn
-1061,1070,Johan Agebjörn,http://www.last.fm/music/Johan+Agebj%C3%B6rn
+1061,1070,Johan Agebj\xf6rn,http://www.last.fm/music/Johan+Agebj%C3%B6rn
 1062,1071,Alan Silvestri,http://www.last.fm/music/Alan+Silvestri
 1063,1072,Martin L. Gore,http://www.last.fm/music/Martin+L.+Gore
 1064,1073,Kraftwerk,http://www.last.fm/music/Kraftwerk
@@ -733,7 +733,7 @@
 1082,1091,AFI,http://www.last.fm/music/AFI
 1085,1094,Kent,http://www.last.fm/music/Kent
 1088,1097,Patrick Wolf,http://www.last.fm/music/Patrick+Wolf
-1089,1098,Björk,http://www.last.fm/music/Bj%C3%B6rk
+1089,1098,Bj\xf6rk,http://www.last.fm/music/Bj%C3%B6rk
 1090,1099,The Prodigy,http://www.last.fm/music/The+Prodigy
 1091,1100,Chiodos,http://www.last.fm/music/Chiodos
 1094,1103,Iggy Pop,http://www.last.fm/music/Iggy+Pop
@@ -743,17 +743,17 @@
 1098,1107,"The Good, the Bad & the Queen",http://www.last.fm/music/The%2BGood%252C%2Bthe%2BBad%2B%2526%2Bthe%2BQueen
 1100,1109,Yann Tiersen,http://www.last.fm/music/Yann+Tiersen
 1101,1110,Rush,http://www.last.fm/music/Rush
-1103,1112,Frédéric Chopin,http://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin
+1103,1112,Fr\xe9d\xe9ric Chopin,http://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin
 1104,1113,Ayreon,http://www.last.fm/music/Ayreon
 1105,1114,Tarja,http://www.last.fm/music/Tarja
 1107,1116,Incubus,http://www.last.fm/music/Incubus
 1108,1117,Claude Debussy,http://www.last.fm/music/Claude+Debussy
 1109,1118,A Perfect Circle,http://www.last.fm/music/A+Perfect+Circle
 1110,1119,Faith No More,http://www.last.fm/music/Faith+No+More
-1111,1120,György Ligeti,http://www.last.fm/music/Gy%C3%B6rgy+Ligeti
+1111,1120,Gy\xf6rgy Ligeti,http://www.last.fm/music/Gy%C3%B6rgy+Ligeti
 1113,1122,The Police,http://www.last.fm/music/The+Police
 1114,1123,Johann Sebastian Bach,http://www.last.fm/music/Johann+Sebastian+Bach
-1117,1126,Noir Désir,http://www.last.fm/music/Noir+D%C3%A9sir
+1117,1126,Noir D\xe9sir,http://www.last.fm/music/Noir+D%C3%A9sir
 1118,1127,The Asteroids Galaxy Tour,http://www.last.fm/music/The+Asteroids+Galaxy+Tour
 1121,1130,Ludwig van Beethoven,http://www.last.fm/music/Ludwig+van+Beethoven
 1122,1131,Tool,http://www.last.fm/music/Tool
@@ -761,8 +761,8 @@
 1125,1134,Agalloch,http://www.last.fm/music/Agalloch
 1126,1135,Camille,http://www.last.fm/music/Camille
 1136,1145,Stone Sour,http://www.last.fm/music/Stone+Sour
-1137,1146,菅野よう子,http://www.last.fm/music/%E8%8F%85%E9%87%8E%E3%82%88%E3%81%86%E5%AD%90
-1139,1148,平沢進,http://www.last.fm/music/%E5%B9%B3%E6%B2%A2%E9%80%B2
+1137,1146,\u83c5\u91ce\u3088\u3046\u5b50,http://www.last.fm/music/%E8%8F%85%E9%87%8E%E3%82%88%E3%81%86%E5%AD%90
+1139,1148,\u5e73\u6ca2\u9032,http://www.last.fm/music/%E5%B9%B3%E6%B2%A2%E9%80%B2
 1141,1150,Leonard Cohen,http://www.last.fm/music/Leonard+Cohen
 1142,1151,Editors,http://www.last.fm/music/Editors
 1145,1154,The Pillows,http://www.last.fm/music/The+Pillows
@@ -849,12 +849,12 @@
 1327,1336,Syrian,http://www.last.fm/music/Syrian
 1329,1338,HammerFall,http://www.last.fm/music/HammerFall
 1330,1339,Sonata Arctica,http://www.last.fm/music/Sonata+Arctica
-1334,1343,Queensrÿche,http://www.last.fm/music/Queensr%C3%BFche
+1334,1343,Queensr\xffche,http://www.last.fm/music/Queensr%C3%BFche
 1341,1350,Edguy,http://www.last.fm/music/Edguy
 1342,1351,Tenacious D,http://www.last.fm/music/Tenacious+D
 1344,1353,Running Wild,http://www.last.fm/music/Running+Wild
 1349,1358,Judas Priest,http://www.last.fm/music/Judas+Priest
-1351,1360,Motörhead,http://www.last.fm/music/Mot%C3%B6rhead
+1351,1360,Mot\xf6rhead,http://www.last.fm/music/Mot%C3%B6rhead
 1355,1364,Exodus,http://www.last.fm/music/Exodus
 1357,1366,W.A.S.P.,http://www.last.fm/music/W.A.S.P.
 1360,1369,Black Sabbath,http://www.last.fm/music/Black+Sabbath
@@ -903,7 +903,7 @@
 1416,1425,David Gilmour,http://www.last.fm/music/David+Gilmour
 1417,1426,The Jimi Hendrix Experience,http://www.last.fm/music/The+Jimi+Hendrix+Experience
 1418,1427,Stevie Wonder,http://www.last.fm/music/Stevie+Wonder
-1419,1428,Dulce María,http://www.last.fm/music/Dulce+Mar%C3%ADa
+1419,1428,Dulce Mar\xeda,http://www.last.fm/music/Dulce+Mar%C3%ADa
 1421,1430,Christopher Von Uckermann,http://www.last.fm/music/Christopher+Von+Uckermann
 1423,1432,Tiziano Ferro,http://www.last.fm/music/Tiziano+Ferro
 1424,1433,Daddy Yankee,http://www.last.fm/music/Daddy+Yankee
@@ -925,7 +925,7 @@
 1452,1461,Big Time Rush,http://www.last.fm/music/Big+Time+Rush
 1454,1463,Amy Macdonald,http://www.last.fm/music/Amy+Macdonald
 1455,1464,ABBA,http://www.last.fm/music/ABBA
-1456,1465,Agnetha Fältskog,http://www.last.fm/music/Agnetha+F%C3%A4ltskog
+1456,1465,Agnetha F\xe4ltskog,http://www.last.fm/music/Agnetha+F%C3%A4ltskog
 1458,1467,Jensen Ackles,http://www.last.fm/music/Jensen+Ackles
 1459,1468,Kansas,http://www.last.fm/music/Kansas
 1460,1469,The Mamas & The Papas,http://www.last.fm/music/The%2BMamas%2B%2526%2BThe%2BPapas
@@ -962,10 +962,10 @@
 1532,1541,The Devil Wears Prada,http://www.last.fm/music/The+Devil+Wears+Prada
 1534,1543,Immortal Technique,http://www.last.fm/music/Immortal+Technique
 1538,1547,Hatebreed,http://www.last.fm/music/Hatebreed
-1544,1553,CéU,http://www.last.fm/music/C%C3%A9U
+1544,1553,C\xe9U,http://www.last.fm/music/C%C3%A9U
 1546,1555,Job for a Cowboy,http://www.last.fm/music/Job+for+a+Cowboy
 1547,1556,Joss Stone,http://www.last.fm/music/Joss+Stone
-1562,1571,Винтаж,http://www.last.fm/music/%D0%92%D0%B8%D0%BD%D1%82%D0%B0%D0%B6
+1562,1571,\u0412\u0438\u043d\u0442\u0430\u0436,http://www.last.fm/music/%D0%92%D0%B8%D0%BD%D1%82%D0%B0%D0%B6
 1571,1580,Paris Hilton,http://www.last.fm/music/Paris+Hilton
 1576,1585,Panik,http://www.last.fm/music/Panik
 1580,1589,S Club 7,http://www.last.fm/music/S+Club+7
@@ -1045,7 +1045,7 @@
 1729,1738,Soulwax,http://www.last.fm/music/Soulwax
 1734,1743,Ludovico Einaudi,http://www.last.fm/music/Ludovico+Einaudi
 1736,1745,Apparat,http://www.last.fm/music/Apparat
-1738,1747,Ólafur Arnalds,http://www.last.fm/music/%C3%93lafur+Arnalds
+1738,1747,\xd3lafur Arnalds,http://www.last.fm/music/%C3%93lafur+Arnalds
 1743,1752,Ellen Allien,http://www.last.fm/music/Ellen+Allien
 1746,1755,Chico Buarque,http://www.last.fm/music/Chico+Buarque
 1748,1757,Secos & Molhados,http://www.last.fm/music/Secos%2B%2526%2BMolhados
@@ -1058,16 +1058,16 @@
 1761,1770,Erik Satie,http://www.last.fm/music/Erik+Satie
 1762,1771,Rita Lee,http://www.last.fm/music/Rita+Lee
 1763,1772,Norah Jones,http://www.last.fm/music/Norah+Jones
-1766,1775,Cássia Eller,http://www.last.fm/music/C%C3%A1ssia+Eller
-1767,1776,Tiê,http://www.last.fm/music/Ti%C3%AA
+1766,1775,C\xe1ssia Eller,http://www.last.fm/music/C%C3%A1ssia+Eller
+1767,1776,Ti\xea,http://www.last.fm/music/Ti%C3%AA
 1768,1777,Adam Green,http://www.last.fm/music/Adam+Green
 1769,1778,Eddie Vedder,http://www.last.fm/music/Eddie+Vedder
 1770,1779,Cartola,http://www.last.fm/music/Cartola
 1772,1781,Emilie Simon,http://www.last.fm/music/Emilie+Simon
-1774,1783,Esbjörn Svensson Trio,http://www.last.fm/music/Esbj%C3%B6rn+Svensson+Trio
-1777,1786,Сплин,http://www.last.fm/music/%D0%A1%D0%BF%D0%BB%D0%B8%D0%BD
+1774,1783,Esbj\xf6rn Svensson Trio,http://www.last.fm/music/Esbj%C3%B6rn+Svensson+Trio
+1777,1786,\u0421\u043f\u043b\u0438\u043d,http://www.last.fm/music/%D0%A1%D0%BF%D0%BB%D0%B8%D0%BD
 1778,1787,UNKLE,http://www.last.fm/music/UNKLE
-1779,1788,Агата Кристи,http://www.last.fm/music/%D0%90%D0%B3%D0%B0%D1%82%D0%B0+%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B8
+1779,1788,\u0410\u0433\u0430\u0442\u0430 \u041a\u0440\u0438\u0441\u0442\u0438,http://www.last.fm/music/%D0%90%D0%B3%D0%B0%D1%82%D0%B0+%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B8
 1780,1789,5'nizza,http://www.last.fm/music/5%27nizza
 1781,1790,Archive,http://www.last.fm/music/Archive
 1784,1793,Schiller,http://www.last.fm/music/Schiller
@@ -1077,7 +1077,7 @@
 1790,1799,Indochine,http://www.last.fm/music/Indochine
 1791,1800,Amethystium,http://www.last.fm/music/Amethystium
 1792,1801,Nightmares on Wax,http://www.last.fm/music/Nightmares+on+Wax
-1794,1803,Mötley Crüe,http://www.last.fm/music/M%C3%B6tley+Cr%C3%BCe
+1794,1803,M\xf6tley Cr\xfce,http://www.last.fm/music/M%C3%B6tley+Cr%C3%BCe
 1795,1804,T. Rex,http://www.last.fm/music/T.+Rex
 1797,1806,Syd Barrett,http://www.last.fm/music/Syd+Barrett
 1798,1807,The Runaways,http://www.last.fm/music/The+Runaways
@@ -1153,12 +1153,12 @@
 1892,1901,They Might Be Giants,http://www.last.fm/music/They+Might+Be+Giants
 1893,1902,New Musik,http://www.last.fm/music/New+Musik
 1895,1905,Shinedown,http://www.last.fm/music/Shinedown
-1896,1906,東方神起,http://www.last.fm/music/%E6%9D%B1%E6%96%B9%E7%A5%9E%E8%B5%B7
+1896,1906,\u6771\u65b9\u795e\u8d77,http://www.last.fm/music/%E6%9D%B1%E6%96%B9%E7%A5%9E%E8%B5%B7
 1897,1907,Mehdi,http://www.last.fm/music/Mehdi
 1900,1910,the GazettE,http://www.last.fm/music/the+GazettE
 1903,1914,The 69 Eyes,http://www.last.fm/music/The+69+Eyes
 1905,1917,Charon,http://www.last.fm/music/Charon
-1906,1918,동방신기,http://www.last.fm/music/%EB%8F%99%EB%B0%A9%EC%8B%A0%EA%B8%B0
+1906,1918,\ub3d9\ubc29\uc2e0\uae30,http://www.last.fm/music/%EB%8F%99%EB%B0%A9%EC%8B%A0%EA%B8%B0
 1907,1919,HIGH and MIGHTY COLOR,http://www.last.fm/music/HIGH+and+MIGHTY+COLOR
 1910,1922,Rie fu,http://www.last.fm/music/Rie+fu
 1912,1925,Fool's Garden,http://www.last.fm/music/Fool%27s+Garden
@@ -1186,10 +1186,10 @@
 1961,1976,The Black Keys,http://www.last.fm/music/The+Black+Keys
 1962,1977,The Raconteurs,http://www.last.fm/music/The+Raconteurs
 1964,1979,Cypress Hill,http://www.last.fm/music/Cypress+Hill
-1965,1980,Czesław Śpiewa,http://www.last.fm/music/Czes%C5%82aw+%C5%9Apiewa
+1965,1980,Czes\u0142aw \u015apiewa,http://www.last.fm/music/Czes%C5%82aw+%C5%9Apiewa
 1966,1981,Kult,http://www.last.fm/music/Kult
 1968,1983,The Knife,http://www.last.fm/music/The+Knife
-1969,1984,Pidżama Porno,http://www.last.fm/music/Pid%C5%BCama+Porno
+1969,1984,Pid\u017cama Porno,http://www.last.fm/music/Pid%C5%BCama+Porno
 1970,1985,Chris Cornell,http://www.last.fm/music/Chris+Cornell
 1971,1986,Metronomy,http://www.last.fm/music/Metronomy
 1973,1988,The Subways,http://www.last.fm/music/The+Subways
@@ -1201,7 +1201,7 @@
 1987,2002,John Petrucci,http://www.last.fm/music/John+Petrucci
 1991,2006,Pain of Salvation,http://www.last.fm/music/Pain+of+Salvation
 1994,2009,DragonForce,http://www.last.fm/music/DragonForce
-1998,2013,Blue Öyster Cult,http://www.last.fm/music/Blue+%C3%96yster+Cult
+1998,2013,Blue \xd6yster Cult,http://www.last.fm/music/Blue+%C3%96yster+Cult
 1999,2014,Lacuna Coil,http://www.last.fm/music/Lacuna+Coil
 2003,2018,September,http://www.last.fm/music/September
 2004,2019,Stacie Orrico,http://www.last.fm/music/Stacie+Orrico
@@ -1238,15 +1238,15 @@
 2067,2082,Marjorie Estiano,http://www.last.fm/music/Marjorie+Estiano
 2068,2083,M.I.A.,http://www.last.fm/music/M.I.A.
 2071,2086,Perfume,http://www.last.fm/music/Perfume
-2074,2089,티아라,http://www.last.fm/music/%ED%8B%B0%EC%95%84%EB%9D%BC
+2074,2089,\ud2f0\uc544\ub77c,http://www.last.fm/music/%ED%8B%B0%EC%95%84%EB%9D%BC
 2076,2091,4minute,http://www.last.fm/music/4minute
-2077,2092,소녀시대,http://www.last.fm/music/%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80
+2077,2092,\uc18c\ub140\uc2dc\ub300,http://www.last.fm/music/%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80
 2079,2094,BoA,http://www.last.fm/music/BoA
 2080,2095,Aira Mitsuki,http://www.last.fm/music/Aira+Mitsuki
-2081,2096,exist†trace,http://www.last.fm/music/exist%E2%80%A0trace
+2081,2096,exist\u2020trace,http://www.last.fm/music/exist%E2%80%A0trace
 2082,2097,Brown Eyed Girls,http://www.last.fm/music/Brown+Eyed+Girls
 2086,2101,Capsule,http://www.last.fm/music/Capsule
-2087,2102,倖田來未,http://www.last.fm/music/%E5%80%96%E7%94%B0%E4%BE%86%E6%9C%AA
+2087,2102,\u5016\u7530\u4f86\u672a,http://www.last.fm/music/%E5%80%96%E7%94%B0%E4%BE%86%E6%9C%AA
 2106,2121,OK Go,http://www.last.fm/music/OK+Go
 2112,2127,The Turtles,http://www.last.fm/music/The+Turtles
 2113,2128,The Rascals,http://www.last.fm/music/The+Rascals
@@ -1272,7 +1272,7 @@
 2152,2167,Fink,http://www.last.fm/music/Fink
 2157,2172,Gojira,http://www.last.fm/music/Gojira
 2160,2175,Etta James,http://www.last.fm/music/Etta+James
-2161,2176,Michael Bublé,http://www.last.fm/music/Michael+Bubl%C3%A9
+2161,2176,Michael Bubl\xe9,http://www.last.fm/music/Michael+Bubl%C3%A9
 2164,2179,50 Cent,http://www.last.fm/music/50+Cent
 2167,2182,Lisa Marie Presley,http://www.last.fm/music/Lisa+Marie+Presley
 2168,2183,Heart,http://www.last.fm/music/Heart
@@ -1300,8 +1300,8 @@
 2270,2285,The American Analog Set,http://www.last.fm/music/The+American+Analog+Set
 2274,2289,Stereolab,http://www.last.fm/music/Stereolab
 2282,2297,Apostle of Hustle,http://www.last.fm/music/Apostle+of+Hustle
-2301,2316,Mor ve Ötesi,http://www.last.fm/music/Mor+ve+%C3%96tesi
-2315,2330,Goran Bregović,http://www.last.fm/music/Goran+Bregovi%C4%87
+2301,2316,Mor ve \xd6tesi,http://www.last.fm/music/Mor+ve+%C3%96tesi
+2315,2330,Goran Bregovi\u0107,http://www.last.fm/music/Goran+Bregovi%C4%87
 2324,2339,Teoman,http://www.last.fm/music/Teoman
 2325,2340,Marissa Nadler,http://www.last.fm/music/Marissa+Nadler
 2326,2341,Twisted Sister,http://www.last.fm/music/Twisted+Sister
@@ -1325,8 +1325,8 @@
 2368,2383,Amatory,http://www.last.fm/music/Amatory
 2369,2384,Unearth,http://www.last.fm/music/Unearth
 2370,2385,Flaw,http://www.last.fm/music/Flaw
-2375,2390,Mónica Naranjo,http://www.last.fm/music/M%C3%B3nica+Naranjo
-2376,2391,Alejandra Guzmán,http://www.last.fm/music/Alejandra+Guzm%C3%A1n
+2375,2390,M\xf3nica Naranjo,http://www.last.fm/music/M%C3%B3nica+Naranjo
+2376,2391,Alejandra Guzm\xe1n,http://www.last.fm/music/Alejandra+Guzm%C3%A1n
 2378,2393,LeToya,http://www.last.fm/music/LeToya
 2380,2395,Chayanne,http://www.last.fm/music/Chayanne
 2383,2398,Final Fantasy,http://www.last.fm/music/Final+Fantasy
@@ -1362,7 +1362,7 @@
 2442,2457,Lonestar,http://www.last.fm/music/Lonestar
 2443,2458,Nat King Cole,http://www.last.fm/music/Nat+King+Cole
 2444,2459,Glenn Miller,http://www.last.fm/music/Glenn+Miller
-2445,2460,João Gilberto,http://www.last.fm/music/Jo%C3%A3o+Gilberto
+2445,2460,Jo\xe3o Gilberto,http://www.last.fm/music/Jo%C3%A3o+Gilberto
 2447,2462,Reik,http://www.last.fm/music/Reik
 2448,2463,Boston,http://www.last.fm/music/Boston
 2450,2465,Alison Krauss,http://www.last.fm/music/Alison+Krauss
@@ -1373,7 +1373,7 @@
 2455,2470,Throbbing Gristle,http://www.last.fm/music/Throbbing+Gristle
 2456,2471,Current 93,http://www.last.fm/music/Current+93
 2457,2472,Foetus,http://www.last.fm/music/Foetus
-2458,2473,Fantômas,http://www.last.fm/music/Fant%C3%B4mas
+2458,2473,Fant\xf4mas,http://www.last.fm/music/Fant%C3%B4mas
 2460,2475,Captain Beefheart & His Magic Band,http://www.last.fm/music/Captain%2BBeefheart%2B%2526%2BHis%2BMagic%2BBand
 2463,2478,Danny Elfman,http://www.last.fm/music/Danny+Elfman
 2465,2480,Suicide,http://www.last.fm/music/Suicide
@@ -1461,12 +1461,12 @@
 2632,2652,The Classic Crime,http://www.last.fm/music/The+Classic+Crime
 2633,2653,A Rocket to the Moon,http://www.last.fm/music/A+Rocket+to+the+Moon
 2634,2654,Bloodbath,http://www.last.fm/music/Bloodbath
-2640,2660,Bidê ou Balde,http://www.last.fm/music/Bid%C3%AA+ou+Balde
+2640,2660,Bid\xea ou Balde,http://www.last.fm/music/Bid%C3%AA+ou+Balde
 2641,2661,Anberlin,http://www.last.fm/music/Anberlin
 2644,2664,Lordi,http://www.last.fm/music/Lordi
 2647,2667,The Flashbulb,http://www.last.fm/music/The+Flashbulb
 2648,2668,Amon Tobin,http://www.last.fm/music/Amon+Tobin
-2649,2669,µ-Ziq,http://www.last.fm/music/%C2%B5-Ziq
+2649,2669,\xb5-Ziq,http://www.last.fm/music/%C2%B5-Ziq
 2651,2671,Kettel,http://www.last.fm/music/Kettel
 2652,2672,Clark,http://www.last.fm/music/Clark
 2653,2673,Plaid,http://www.last.fm/music/Plaid
@@ -1486,7 +1486,7 @@
 2724,2744,Machine Head,http://www.last.fm/music/Machine+Head
 2725,2745,Robert Miles,http://www.last.fm/music/Robert+Miles
 2726,2746,Korpiklaani,http://www.last.fm/music/Korpiklaani
-2727,2747,Дельфин,http://www.last.fm/music/%D0%94%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D0%BD
+2727,2747,\u0414\u0435\u043b\u044c\u0444\u0438\u043d,http://www.last.fm/music/%D0%94%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D0%BD
 2735,2755,1349,http://www.last.fm/music/1349
 2736,2756,Xasthur,http://www.last.fm/music/Xasthur
 2745,2765,Vader,http://www.last.fm/music/Vader
@@ -1502,17 +1502,17 @@
 2767,2787,Whitesnake,http://www.last.fm/music/Whitesnake
 2768,2788,Joan Jett and the Blackhearts,http://www.last.fm/music/Joan+Jett+and+the+Blackhearts
 2769,2789,Velvet Revolver,http://www.last.fm/music/Velvet+Revolver
-2770,2790,CRASHDÏET,http://www.last.fm/music/CRASHD%C3%8FET
+2770,2790,CRASHD\xcfET,http://www.last.fm/music/CRASHD%C3%8FET
 2772,2792,Cheap Trick,http://www.last.fm/music/Cheap+Trick
 2774,2794,Alter Bridge,http://www.last.fm/music/Alter+Bridge
 2776,2796,Sweet,http://www.last.fm/music/Sweet
 2777,2797,Mr. Big,http://www.last.fm/music/Mr.+Big
 2779,2799,f(x),http://www.last.fm/music/f%28x%29
 2781,2801,High School Musical,http://www.last.fm/music/High+School+Musical
-2782,2802,현아,http://www.last.fm/music/%ED%98%84%EC%95%84
+2782,2802,\ud604\uc544,http://www.last.fm/music/%ED%98%84%EC%95%84
 2783,2803,MBLAQ,http://www.last.fm/music/MBLAQ
 2791,2811,Xploding Plastix,http://www.last.fm/music/Xploding+Plastix
-2795,2815,Maxïmo Park,http://www.last.fm/music/Max%C3%AFmo+Park
+2795,2815,Max\xefmo Park,http://www.last.fm/music/Max%C3%AFmo+Park
 2797,2817,Cult of Luna,http://www.last.fm/music/Cult+of+Luna
 2798,2818,The Bloody Beetroots,http://www.last.fm/music/The+Bloody+Beetroots
 2800,2820,Sakura,http://www.last.fm/music/Sakura
@@ -1587,7 +1587,7 @@
 2963,2983,Detonautas Roque Clube,http://www.last.fm/music/Detonautas+Roque+Clube
 2964,2984,Claudia Leitte,http://www.last.fm/music/Claudia+Leitte
 2966,2986,Rosa De Saron,http://www.last.fm/music/Rosa+De+Saron
-2968,2988,Maria Gadú,http://www.last.fm/music/Maria+Gad%C3%BA
+2968,2988,Maria Gad\xfa,http://www.last.fm/music/Maria+Gad%C3%BA
 2970,2990,Shontelle,http://www.last.fm/music/Shontelle
 2983,3003,Duke Ellington,http://www.last.fm/music/Duke+Ellington
 2984,3004,Sonny Rollins,http://www.last.fm/music/Sonny+Rollins
@@ -1599,10 +1599,10 @@
 3010,3030,Bombay Bicycle Club,http://www.last.fm/music/Bombay+Bicycle+Club
 3012,3032,Comeback Kid,http://www.last.fm/music/Comeback+Kid
 3013,3033,The Scene Aesthetic,http://www.last.fm/music/The+Scene+Aesthetic
-3026,3046,Zемфира,http://www.last.fm/music/Z%D0%B5%D0%BC%D1%84%D0%B8%D1%80%D0%B0
+3026,3046,Z\u0435\u043c\u0444\u0438\u0440\u0430,http://www.last.fm/music/Z%D0%B5%D0%BC%D1%84%D0%B8%D1%80%D0%B0
 3030,3050,Biohazard,http://www.last.fm/music/Biohazard
 3031,3051,Submersed,http://www.last.fm/music/Submersed
-3033,3053,Кино,http://www.last.fm/music/%D0%9A%D0%B8%D0%BD%D0%BE
+3033,3053,\u041a\u0438\u043d\u043e,http://www.last.fm/music/%D0%9A%D0%B8%D0%BD%D0%BE
 3037,3057,Regina Spektor,http://www.last.fm/music/Regina+Spektor
 3043,3063,Luis Miguel,http://www.last.fm/music/Luis+Miguel
 3045,3065,Ringo Starr,http://www.last.fm/music/Ringo+Starr
@@ -1643,15 +1643,15 @@
 3121,3141,DJ Drez,http://www.last.fm/music/DJ+Drez
 3127,3147,"Lee ""Scratch"" Perry",http://www.last.fm/music/Lee+%22Scratch%22+Perry
 3136,3156,Astrud Gilberto,http://www.last.fm/music/Astrud+Gilberto
-3138,3158,Sébastien Tellier,http://www.last.fm/music/S%C3%A9bastien+Tellier
+3138,3158,S\xe9bastien Tellier,http://www.last.fm/music/S%C3%A9bastien+Tellier
 3140,3160,Booker T. & The MG's,http://www.last.fm/music/Booker%2BT.%2B%2526%2BThe%2BMG%2527s
 3144,3164,Flunk,http://www.last.fm/music/Flunk
 3149,3169,DJ Vadim,http://www.last.fm/music/DJ+Vadim
 3151,3171,James Morrison,http://www.last.fm/music/James+Morrison
 3153,3173,Ivete Sangalo,http://www.last.fm/music/Ivete+Sangalo
 3156,3176,Kelly Key,http://www.last.fm/music/Kelly+Key
-3164,3184,L'Âme Immortelle,http://www.last.fm/music/L%27%C3%82me+Immortelle
-3166,3186,Vive la Fête,http://www.last.fm/music/Vive+la+F%C3%AAte
+3164,3184,L'\xc2me Immortelle,http://www.last.fm/music/L%27%C3%82me+Immortelle
+3166,3186,Vive la F\xeate,http://www.last.fm/music/Vive+la+F%C3%AAte
 3167,3187,Kudai,http://www.last.fm/music/Kudai
 3168,3188,Terminal Choice,http://www.last.fm/music/Terminal+Choice
 3170,3190,Suicidal Romance,http://www.last.fm/music/Suicidal+Romance
@@ -1665,12 +1665,12 @@
 3179,3199,Patrick Nuo,http://www.last.fm/music/Patrick+Nuo
 3180,3200,Cansei de Ser Sexy,http://www.last.fm/music/Cansei+de+Ser+Sexy
 3181,3201,Kate Bush,http://www.last.fm/music/Kate+Bush
-3185,3205,Mallu Magalhães,http://www.last.fm/music/Mallu+Magalh%C3%A3es
+3185,3205,Mallu Magalh\xe3es,http://www.last.fm/music/Mallu+Magalh%C3%A3es
 3186,3206,The Bird and The Bee,http://www.last.fm/music/The+Bird+and+The+Bee
 3187,3208,Jon Brion,http://www.last.fm/music/Jon+Brion
 3189,3213,Michael Andrews,http://www.last.fm/music/Michael+Andrews
 3190,3216,John Cage,http://www.last.fm/music/John+Cage
-3193,3222,Slagsmålsklubben,http://www.last.fm/music/Slagsm%C3%A5lsklubben
+3193,3222,Slagsm\xe5lsklubben,http://www.last.fm/music/Slagsm%C3%A5lsklubben
 3195,3227,Wu-Tang Clan,http://www.last.fm/music/Wu-Tang+Clan
 3196,3230,The Moody Blues,http://www.last.fm/music/The+Moody+Blues
 3197,3231,The Polyphonic Spree,http://www.last.fm/music/The+Polyphonic+Spree
@@ -1716,14 +1716,14 @@
 3271,3308,Supertramp,http://www.last.fm/music/Supertramp
 3274,3311,Michael Bolton,http://www.last.fm/music/Michael+Bolton
 3276,3313,The Jackson 5,http://www.last.fm/music/The+Jackson+5
-3277,3314,Mýa,http://www.last.fm/music/M%C3%BDa
+3277,3314,M\xfda,http://www.last.fm/music/M%C3%BDa
 3279,3316,Sean Paul,http://www.last.fm/music/Sean+Paul
 3280,3317,Drake,http://www.last.fm/music/Drake
 3281,3318,Trey Songz,http://www.last.fm/music/Trey+Songz
 3282,3319,Diana Vickers,http://www.last.fm/music/Diana+Vickers
 3283,3320,Lee Ryan,http://www.last.fm/music/Lee+Ryan
 3285,3322,Pete Yorn & Scarlett Johansson,http://www.last.fm/music/Pete%2BYorn%2B%2526%2BScarlett%2BJohansson
-3287,3324,安室奈美恵,http://www.last.fm/music/%E5%AE%89%E5%AE%A4%E5%A5%88%E7%BE%8E%E6%81%B5
+3287,3324,\u5b89\u5ba4\u5948\u7f8e\u6075,http://www.last.fm/music/%E5%AE%89%E5%AE%A4%E5%A5%88%E7%BE%8E%E6%81%B5
 3290,3327,Brie Larson,http://www.last.fm/music/Brie+Larson
 3291,3328,HorrorPops,http://www.last.fm/music/HorrorPops
 3296,3333,The Distillers,http://www.last.fm/music/The+Distillers
@@ -1789,15 +1789,15 @@
 3443,3480,L.A. Guns,http://www.last.fm/music/L.A.+Guns
 3444,3481,Yes,http://www.last.fm/music/Yes
 3445,3482,America,http://www.last.fm/music/America
-3446,3483,鈴木亜美,http://www.last.fm/music/%E9%88%B4%E6%9C%A8%E4%BA%9C%E7%BE%8E
+3446,3483,\u9234\u6728\u4e9c\u7f8e,http://www.last.fm/music/%E9%88%B4%E6%9C%A8%E4%BA%9C%E7%BE%8E
 3451,3488,Corinne Bailey Rae,http://www.last.fm/music/Corinne+Bailey+Rae
 3452,3489,Michelle Branch,http://www.last.fm/music/Michelle+Branch
 3453,3490,Utada,http://www.last.fm/music/Utada
 3458,3495,Leigh Nash,http://www.last.fm/music/Leigh+Nash
 3460,3497,Jordan Pruitt,http://www.last.fm/music/Jordan+Pruitt
-3463,3500,Edyta Górniak,http://www.last.fm/music/Edyta+G%C3%B3rniak
-3464,3501,Mylène Farmer,http://www.last.fm/music/Myl%C3%A8ne+Farmer
-3465,3502,Róisín Murphy,http://www.last.fm/music/R%C3%B3is%C3%ADn+Murphy
+3463,3500,Edyta G\xf3rniak,http://www.last.fm/music/Edyta+G%C3%B3rniak
+3464,3501,Myl\xe8ne Farmer,http://www.last.fm/music/Myl%C3%A8ne+Farmer
+3465,3502,R\xf3is\xedn Murphy,http://www.last.fm/music/R%C3%B3is%C3%ADn+Murphy
 3466,3503,Tarkan,http://www.last.fm/music/Tarkan
 3467,3504,Fennesz,http://www.last.fm/music/Fennesz
 3468,3505,John Zorn,http://www.last.fm/music/John+Zorn
@@ -1811,8 +1811,8 @@
 3490,3540,Discharge,http://www.last.fm/music/Discharge
 3499,3549,Mnemic,http://www.last.fm/music/Mnemic
 3501,3551,Unter Null,http://www.last.fm/music/Unter+Null
-3502,3552,℃-ute,http://www.last.fm/music/%E2%84%83-ute
-3504,3554,Berryz工房,http://www.last.fm/music/Berryz%E5%B7%A5%E6%88%BF
+3502,3552,\u2103-ute,http://www.last.fm/music/%E2%84%83-ute
+3504,3554,Berryz\u5de5\u623f,http://www.last.fm/music/Berryz%E5%B7%A5%E6%88%BF
 3506,3556,Scarling.,http://www.last.fm/music/Scarling.
 3507,3557,Aqua,http://www.last.fm/music/Aqua
 3508,3558,Jack Off Jill,http://www.last.fm/music/Jack+Off+Jill
@@ -1848,7 +1848,7 @@
 3598,3670,Matisyahu,http://www.last.fm/music/Matisyahu
 3600,3672,Scarlett Johansson,http://www.last.fm/music/Scarlett+Johansson
 3601,3673,Girl Talk,http://www.last.fm/music/Girl+Talk
-3602,3674,Alizée,http://www.last.fm/music/Aliz%C3%A9e
+3602,3674,Aliz\xe9e,http://www.last.fm/music/Aliz%C3%A9e
 3603,3675,Huey Lewis & The News,http://www.last.fm/music/Huey%2BLewis%2B%2526%2BThe%2BNews
 3604,3676,Richard Ashcroft,http://www.last.fm/music/Richard+Ashcroft
 3605,3677,Brian Wilson,http://www.last.fm/music/Brian+Wilson
@@ -1880,7 +1880,7 @@
 3663,3739,Hole,http://www.last.fm/music/Hole
 3664,3740,Dance of Days,http://www.last.fm/music/Dance+of+Days
 3665,3741,Cazuza,http://www.last.fm/music/Cazuza
-3666,3742,Lobão,http://www.last.fm/music/Lob%C3%A3o
+3666,3742,Lob\xe3o,http://www.last.fm/music/Lob%C3%A3o
 3671,3747,Vanguart,http://www.last.fm/music/Vanguart
 3672,3748,Hanson,http://www.last.fm/music/Hanson
 3673,3749,Gavin DeGraw,http://www.last.fm/music/Gavin+DeGraw
@@ -1928,7 +1928,7 @@
 3799,3875,Nitin Sawhney,http://www.last.fm/music/Nitin+Sawhney
 3800,3876,Chris de Burgh,http://www.last.fm/music/Chris+de+Burgh
 3802,3878,Macy Gray,http://www.last.fm/music/Macy+Gray
-3804,3880,Массква,http://www.last.fm/music/%D0%9C%D0%B0%D1%81%D1%81%D0%BA%D0%B2%D0%B0
+3804,3880,\u041c\u0430\u0441\u0441\u043a\u0432\u0430,http://www.last.fm/music/%D0%9C%D0%B0%D1%81%D1%81%D0%BA%D0%B2%D0%B0
 3806,3882,A.R. Rahman,http://www.last.fm/music/A.R.+Rahman
 3808,3884,Slowdive,http://www.last.fm/music/Slowdive
 3809,3885,Julee Cruise,http://www.last.fm/music/Julee+Cruise
@@ -1971,7 +1971,7 @@
 3889,3965,Leilah Moreno,http://www.last.fm/music/Leilah+Moreno
 3890,3966,Modern Talking,http://www.last.fm/music/Modern+Talking
 3891,3967,Taleesa,http://www.last.fm/music/Taleesa
-3892,3968,Conexão Midi,http://www.last.fm/music/Conex%C3%A3o+Midi
+3892,3968,Conex\xe3o Midi,http://www.last.fm/music/Conex%C3%A3o+Midi
 3893,3969,No Mercy,http://www.last.fm/music/No+Mercy
 3895,3971,Undercover,http://www.last.fm/music/Undercover
 3896,3972,2 Brothers on the 4th Floor,http://www.last.fm/music/2+Brothers+on+the+4th+Floor
@@ -2041,8 +2041,8 @@
 4053,4137,Sirenia,http://www.last.fm/music/Sirenia
 4054,4138,Hungry Lucy,http://www.last.fm/music/Hungry+Lucy
 4059,4143,Agua de Annique,http://www.last.fm/music/Agua+de+Annique
-4069,4153,Télépopmusik,http://www.last.fm/music/T%C3%A9l%C3%A9popmusik
-4071,4155,Die Ärzte,http://www.last.fm/music/Die+%C3%84rzte
+4069,4153,T\xe9l\xe9popmusik,http://www.last.fm/music/T%C3%A9l%C3%A9popmusik
+4071,4155,Die \xc4rzte,http://www.last.fm/music/Die+%C3%84rzte
 4072,4156,Die Toten Hosen,http://www.last.fm/music/Die+Toten+Hosen
 4081,4165,Poison,http://www.last.fm/music/Poison
 4086,4170,Demon Hunter,http://www.last.fm/music/Demon+Hunter
@@ -2062,9 +2062,9 @@
 4132,4216,Reel Big Fish,http://www.last.fm/music/Reel+Big+Fish
 4133,4217,"Defiance, Ohio",http://www.last.fm/music/Defiance%2C+Ohio
 4139,4223,The Spill Canvas,http://www.last.fm/music/The+Spill+Canvas
-4141,4225,Мои Ракеты Вверх,http://www.last.fm/music/%D0%9C%D0%BE%D0%B8+%D0%A0%D0%B0%D0%BA%D0%B5%D1%82%D1%8B+%D0%92%D0%B2%D0%B5%D1%80%D1%85
+4141,4225,\u041c\u043e\u0438 \u0420\u0430\u043a\u0435\u0442\u044b \u0412\u0432\u0435\u0440\u0445,http://www.last.fm/music/%D0%9C%D0%BE%D0%B8+%D0%A0%D0%B0%D0%BA%D0%B5%D1%82%D1%8B+%D0%92%D0%B2%D0%B5%D1%80%D1%85
 4144,4228,Everything Is Made in China,http://www.last.fm/music/Everything+Is+Made+in+China
-4145,4229,Адаптация Пчёл,http://www.last.fm/music/%D0%90%D0%B4%D0%B0%D0%BF%D1%82%D0%B0%D1%86%D0%B8%D1%8F+%D0%9F%D1%87%D1%91%D0%BB
+4145,4229,\u0410\u0434\u0430\u043f\u0442\u0430\u0446\u0438\u044f \u041f\u0447\u0451\u043b,http://www.last.fm/music/%D0%90%D0%B4%D0%B0%D0%BF%D1%82%D0%B0%D1%86%D0%B8%D1%8F+%D0%9F%D1%87%D1%91%D0%BB
 4146,4230,The American Dollar,http://www.last.fm/music/The+American+Dollar
 4148,4232,Caspian,http://www.last.fm/music/Caspian
 4166,4250,The Undertones,http://www.last.fm/music/The+Undertones
@@ -2080,7 +2080,7 @@
 4188,4272,Darkthrone,http://www.last.fm/music/Darkthrone
 4207,4291,Drake Bell,http://www.last.fm/music/Drake+Bell
 4211,4295,Andy Fletcher,http://www.last.fm/music/Andy+Fletcher
-4213,4297,Линда,http://www.last.fm/music/%D0%9B%D0%B8%D0%BD%D0%B4%D0%B0
+4213,4297,\u041b\u0438\u043d\u0434\u0430,http://www.last.fm/music/%D0%9B%D0%B8%D0%BD%D0%B4%D0%B0
 4223,4307,Trash Palace,http://www.last.fm/music/Trash+Palace
 4224,4308,Client,http://www.last.fm/music/Client
 4227,4311,Ian Brown,http://www.last.fm/music/Ian+Brown
@@ -2114,7 +2114,7 @@
 4348,4432,Our Lady Peace,http://www.last.fm/music/Our+Lady+Peace
 4350,4434,The Ataris,http://www.last.fm/music/The+Ataris
 4351,4435,The Bravery,http://www.last.fm/music/The+Bravery
-4353,4437,梶浦由記,http://www.last.fm/music/%E6%A2%B6%E6%B5%A6%E7%94%B1%E8%A8%98
+4353,4437,\u68b6\u6d66\u7531\u8a18,http://www.last.fm/music/%E6%A2%B6%E6%B5%A6%E7%94%B1%E8%A8%98
 4355,4439,Dishwalla,http://www.last.fm/music/Dishwalla
 4360,4444,Doves,http://www.last.fm/music/Doves
 4363,4447,Beth Orton,http://www.last.fm/music/Beth+Orton
@@ -2125,13 +2125,13 @@
 4383,4468,Darvin,http://www.last.fm/music/Darvin
 4390,4481,Leslie Mills,http://www.last.fm/music/Leslie+Mills
 4393,4487,Jon McLaughlin,http://www.last.fm/music/Jon+McLaughlin
-4394,4488,Marié Digby,http://www.last.fm/music/Mari%C3%A9+Digby
+4394,4488,Mari\xe9 Digby,http://www.last.fm/music/Mari%C3%A9+Digby
 4395,4489,Jennifer Love Hewitt,http://www.last.fm/music/Jennifer+Love+Hewitt
 4399,4493,The Bangles,http://www.last.fm/music/The+Bangles
 4400,4494,Joe Jackson,http://www.last.fm/music/Joe+Jackson
 4401,4495,Dusty Springfield,http://www.last.fm/music/Dusty+Springfield
 4403,4497,The Acacia Strain,http://www.last.fm/music/The+Acacia+Strain
-4408,4502,Слот,http://www.last.fm/music/%D0%A1%D0%BB%D0%BE%D1%82
+4408,4502,\u0421\u043b\u043e\u0442,http://www.last.fm/music/%D0%A1%D0%BB%D0%BE%D1%82
 4422,4516,S.M. THE BALLAD,http://www.last.fm/music/S.M.+THE+BALLAD
 4426,4520,Hank Williams,http://www.last.fm/music/Hank+Williams
 4436,4530,Steve Earle,http://www.last.fm/music/Steve+Earle
@@ -2147,12 +2147,12 @@
 4465,4559,Busted,http://www.last.fm/music/Busted
 4466,4560,Brooke Hogan,http://www.last.fm/music/Brooke+Hogan
 4467,4561,Edward Maya,http://www.last.fm/music/Edward+Maya
-4468,4562,Jason Derülo,http://www.last.fm/music/Jason+Der%C3%BClo
+4468,4562,Jason Der\xfclo,http://www.last.fm/music/Jason+Der%C3%BClo
 4471,4565,Doda,http://www.last.fm/music/Doda
 4472,4566,Amerie,http://www.last.fm/music/Amerie
 4474,4568,Virgin,http://www.last.fm/music/Virgin
 4476,4570,Nosowska,http://www.last.fm/music/Nosowska
-4478,4572,Chylińska,http://www.last.fm/music/Chyli%C5%84ska
+4478,4572,Chyli\u0144ska,http://www.last.fm/music/Chyli%C5%84ska
 4480,4574,Ania,http://www.last.fm/music/Ania
 4481,4575,Rebecca Black,http://www.last.fm/music/Rebecca+Black
 4491,4585,Method Man,http://www.last.fm/music/Method+Man
@@ -2171,7 +2171,7 @@
 4580,4681,Andromeda,http://www.last.fm/music/Andromeda
 4582,4686,Arash,http://www.last.fm/music/Arash
 4592,4696,The-Dream,http://www.last.fm/music/The-Dream
-4598,4702,Marta Sánchez,http://www.last.fm/music/Marta+S%C3%A1nchez
+4598,4702,Marta S\xe1nchez,http://www.last.fm/music/Marta+S%C3%A1nchez
 4600,4704,Ladyhawke,http://www.last.fm/music/Ladyhawke
 4601,4705,All Saints,http://www.last.fm/music/All+Saints
 4602,4706,Sam Sparro,http://www.last.fm/music/Sam+Sparro
@@ -2185,7 +2185,7 @@
 4620,4728,Vitalic,http://www.last.fm/music/Vitalic
 4622,4732,Fischerspooner,http://www.last.fm/music/Fischerspooner
 4623,4733,Sebastian,http://www.last.fm/music/Sebastian
-4624,4734,Trentemøller,http://www.last.fm/music/Trentem%C3%B8ller
+4624,4734,Trentem\xf8ller,http://www.last.fm/music/Trentem%C3%B8ller
 4625,4735,Junior Boys,http://www.last.fm/music/Junior+Boys
 4632,4742,Ash,http://www.last.fm/music/Ash
 4637,4747,Fireflight,http://www.last.fm/music/Fireflight
@@ -2228,11 +2228,11 @@
 4756,4866,Gabriel o Pensador,http://www.last.fm/music/Gabriel+o+Pensador
 4761,4871,Project Pitchfork,http://www.last.fm/music/Project+Pitchfork
 4762,4872,Deine Lakaien,http://www.last.fm/music/Deine+Lakaien
-4765,4875,Leæther Strip,http://www.last.fm/music/Le%C3%A6ther+Strip
+4765,4875,Le\xe6ther Strip,http://www.last.fm/music/Le%C3%A6ther+Strip
 4766,4876,In Strict Confidence,http://www.last.fm/music/In+Strict+Confidence
 4770,4880,Sandra,http://www.last.fm/music/Sandra
 4773,4883,TLC,http://www.last.fm/music/TLC
-4791,4901,Егор и Опизденевшие,http://www.last.fm/music/%D0%95%D0%B3%D0%BE%D1%80+%D0%B8+%D0%9E%D0%BF%D0%B8%D0%B7%D0%B4%D0%B5%D0%BD%D0%B5%D0%B2%D1%88%D0%B8%D0%B5
+4791,4901,\u0415\u0433\u043e\u0440 \u0438 \u041e\u043f\u0438\u0437\u0434\u0435\u043d\u0435\u0432\u0448\u0438\u0435,http://www.last.fm/music/%D0%95%D0%B3%D0%BE%D1%80+%D0%B8+%D0%9E%D0%BF%D0%B8%D0%B7%D0%B4%D0%B5%D0%BD%D0%B5%D0%B2%D1%88%D0%B8%D0%B5
 4805,4915,Paula Abdul,http://www.last.fm/music/Paula+Abdul
 4810,4920,James Horner,http://www.last.fm/music/James+Horner
 4813,4923,Alexandre Desplat,http://www.last.fm/music/Alexandre+Desplat
@@ -2245,8 +2245,8 @@
 4868,4978,Mr. Mister,http://www.last.fm/music/Mr.+Mister
 4870,4980,Olivia,http://www.last.fm/music/Olivia
 4878,4988,Chris Spheeris,http://www.last.fm/music/Chris+Spheeris
-4880,4990,عمر دياب,http://www.last.fm/music/%D8%B9%D9%85%D8%B1+%D8%AF%D9%8A%D8%A7%D8%A8
-4881,4991,Cesária Évora,http://www.last.fm/music/Ces%C3%A1ria+%C3%89vora
+4880,4990,\u0639\u0645\u0631 \u062f\u064a\u0627\u0628,http://www.last.fm/music/%D8%B9%D9%85%D8%B1+%D8%AF%D9%8A%D8%A7%D8%A8
+4881,4991,Ces\xe1ria \xc9vora,http://www.last.fm/music/Ces%C3%A1ria+%C3%89vora
 4883,4993,Black,http://www.last.fm/music/Black
 4884,4994,Team Sleep,http://www.last.fm/music/Team+Sleep
 4887,4997,Yoav,http://www.last.fm/music/Yoav
@@ -2257,7 +2257,7 @@
 4917,5027,Le Tigre,http://www.last.fm/music/Le+Tigre
 4920,5030,The Pigeon Detectives,http://www.last.fm/music/The+Pigeon+Detectives
 4922,5032,Britt Nicole,http://www.last.fm/music/Britt+Nicole
-4926,5036,Raven-Symoné,http://www.last.fm/music/Raven-Symon%C3%A9
+4926,5036,Raven-Symon\xe9,http://www.last.fm/music/Raven-Symon%C3%A9
 4934,5045,Basement Jaxx,http://www.last.fm/music/Basement+Jaxx
 4935,5048,The Streets,http://www.last.fm/music/The+Streets
 4939,5052,Kangding Ray,http://www.last.fm/music/Kangding+Ray
@@ -2271,15 +2271,15 @@
 4959,5075,Dance Club Massacre,http://www.last.fm/music/Dance+Club+Massacre
 4960,5076,X JAPAN,http://www.last.fm/music/X+JAPAN
 4963,5079,Emilie Autumn,http://www.last.fm/music/Emilie+Autumn
-4967,5083,モーニング娘。,http://www.last.fm/music/%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%A8%98%E3%80%82
-4973,5089,大塚愛,http://www.last.fm/music/%E5%A4%A7%E5%A1%9A%E6%84%9B
+4967,5083,\u30e2\u30fc\u30cb\u30f3\u30b0\u5a18\u3002,http://www.last.fm/music/%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%A8%98%E3%80%82
+4973,5089,\u5927\u585a\u611b,http://www.last.fm/music/%E5%A4%A7%E5%A1%9A%E6%84%9B
 4983,5099,Train,http://www.last.fm/music/Train
 4984,5100,Shadows Fall,http://www.last.fm/music/Shadows+Fall
 4989,5105,Cavalera Conspiracy,http://www.last.fm/music/Cavalera+Conspiracy
 5000,5119,Marcelo D2,http://www.last.fm/music/Marcelo+D2
 5004,5123,Survivor,http://www.last.fm/music/Survivor
 5005,5124,Kenny Loggins,http://www.last.fm/music/Kenny+Loggins
-5008,5127,Mein Hünd Morder,http://www.last.fm/music/Mein+H%C3%BCnd+Morder
+5008,5127,Mein H\xfcnd Morder,http://www.last.fm/music/Mein+H%C3%BCnd+Morder
 5024,5143,Sienna Skies,http://www.last.fm/music/Sienna+Skies
 5028,5147,Sleigh Bells,http://www.last.fm/music/Sleigh+Bells
 5030,5149,Uffie,http://www.last.fm/music/Uffie
@@ -2353,7 +2353,7 @@
 5299,5421,Rasputina,http://www.last.fm/music/Rasputina
 5301,5423,...And You Will Know Us by the Trail of Dead,http://www.last.fm/music/...And+You+Will+Know+Us+by+the+Trail+of+Dead
 5304,5426,My American Heart,http://www.last.fm/music/My+American+Heart
-5306,5428,Jack Peñate,http://www.last.fm/music/Jack+Pe%C3%B1ate
+5306,5428,Jack Pe\xf1ate,http://www.last.fm/music/Jack+Pe%C3%B1ate
 5307,5429,Good Shoes,http://www.last.fm/music/Good+Shoes
 5310,5432,Bread,http://www.last.fm/music/Bread
 5311,5433,Peter & Gordon,http://www.last.fm/music/Peter%2B%2526%2BGordon
@@ -2387,7 +2387,7 @@
 5427,5550,The Pretenders,http://www.last.fm/music/The+Pretenders
 5430,5553,Cary Brothers,http://www.last.fm/music/Cary+Brothers
 5432,5555,Butterfly Boucher,http://www.last.fm/music/Butterfly+Boucher
-5440,5563,後藤真希,http://www.last.fm/music/%E5%BE%8C%E8%97%A4%E7%9C%9F%E5%B8%8C
+5440,5563,\u5f8c\u85e4\u771f\u5e0c,http://www.last.fm/music/%E5%BE%8C%E8%97%A4%E7%9C%9F%E5%B8%8C
 5458,5581,Aesthetic Perfection,http://www.last.fm/music/Aesthetic+Perfection
 5463,5586,Collide,http://www.last.fm/music/Collide
 5480,5603,Prong,http://www.last.fm/music/Prong
@@ -2447,13 +2447,13 @@
 5789,5914,My Brightest Diamond,http://www.last.fm/music/My+Brightest+Diamond
 5792,5917,The Comsat Angels,http://www.last.fm/music/The+Comsat+Angels
 5793,5918,The Danse Society,http://www.last.fm/music/The+Danse+Society
-5798,5923,Катя Чехова,http://www.last.fm/music/%D0%9A%D0%B0%D1%82%D1%8F+%D0%A7%D0%B5%D1%85%D0%BE%D0%B2%D0%B0
+5798,5923,\u041a\u0430\u0442\u044f \u0427\u0435\u0445\u043e\u0432\u0430,http://www.last.fm/music/%D0%9A%D0%B0%D1%82%D1%8F+%D0%A7%D0%B5%D1%85%D0%BE%D0%B2%D0%B0
 5800,5925,Peter Bjorn and John,http://www.last.fm/music/Peter+Bjorn+and+John
 5801,5926,The Sounds,http://www.last.fm/music/The+Sounds
 5802,5927,Bang Gang,http://www.last.fm/music/Bang+Gang
 5804,5929,The Organ,http://www.last.fm/music/The+Organ
 5807,5932,Pogo,http://www.last.fm/music/Pogo
-5809,5934,Bonde do Rolê,http://www.last.fm/music/Bonde+do+Rol%C3%AA
+5809,5934,Bonde do Rol\xea,http://www.last.fm/music/Bonde+do+Rol%C3%AA
 5822,5947,LMFAO,http://www.last.fm/music/LMFAO
 5825,5950,Cash Cash,http://www.last.fm/music/Cash+Cash
 5841,5966,Circa Survive,http://www.last.fm/music/Circa+Survive
@@ -2474,7 +2474,7 @@
 5939,6064,Nena,http://www.last.fm/music/Nena
 5940,6065,Men Without Hats,http://www.last.fm/music/Men+Without+Hats
 5948,6073,Missing Persons,http://www.last.fm/music/Missing+Persons
-5950,6075,坂本龍一,http://www.last.fm/music/%E5%9D%82%E6%9C%AC%E9%BE%8D%E4%B8%80
+5950,6075,\u5742\u672c\u9f8d\u4e00,http://www.last.fm/music/%E5%9D%82%E6%9C%AC%E9%BE%8D%E4%B8%80
 5951,6076,Huepow00,http://www.last.fm/music/Huepow00
 5961,6086,Safri Duo,http://www.last.fm/music/Safri+Duo
 5995,6120,CPM 22,http://www.last.fm/music/CPM+22
@@ -2483,20 +2483,20 @@
 6005,6130,Filter,http://www.last.fm/music/Filter
 6008,6133,Roadrunner United,http://www.last.fm/music/Roadrunner+United
 6009,6134,Fair to Midland,http://www.last.fm/music/Fair+to+Midland
-6012,6137,Antônio Carlos Jobim,http://www.last.fm/music/Ant%C3%B4nio+Carlos+Jobim
+6012,6137,Ant\xf4nio Carlos Jobim,http://www.last.fm/music/Ant%C3%B4nio+Carlos+Jobim
 6015,6140,John Denver,http://www.last.fm/music/John+Denver
 6016,6141,Baden Powell,http://www.last.fm/music/Baden+Powell
 6021,6146,Sebadoh,http://www.last.fm/music/Sebadoh
 6024,6149,Marbury,http://www.last.fm/music/Marbury
 6025,6150,Tangerine Dream,http://www.last.fm/music/Tangerine+Dream
 6026,6151,Stars of the Lid,http://www.last.fm/music/Stars+of+the+Lid
-6027,6152,Atom™,http://www.last.fm/music/Atom%E2%84%A2
+6027,6152,Atom\u2122,http://www.last.fm/music/Atom%E2%84%A2
 6030,6155,Windy & Carl,http://www.last.fm/music/Windy%2B%2526%2BCarl
 6033,6158,Michael Rother,http://www.last.fm/music/Michael+Rother
 6034,6159,Eluvium,http://www.last.fm/music/Eluvium
 6035,6160,Loscil,http://www.last.fm/music/Loscil
-6036,6161,Arvo Pärt,http://www.last.fm/music/Arvo+P%C3%A4rt
-6037,6162,Pan•American,http://www.last.fm/music/Pan%E2%80%A2American
+6036,6161,Arvo P\xe4rt,http://www.last.fm/music/Arvo+P%C3%A4rt
+6037,6162,Pan\u2022American,http://www.last.fm/music/Pan%E2%80%A2American
 6038,6163,William Basinski,http://www.last.fm/music/William+Basinski
 6040,6165,Ten Years After,http://www.last.fm/music/Ten+Years+After
 6043,6168,Morton Feldman,http://www.last.fm/music/Morton+Feldman
@@ -2520,11 +2520,11 @@
 6102,6227,Boy Kill Boy,http://www.last.fm/music/Boy+Kill+Boy
 6106,6231,The Perishers,http://www.last.fm/music/The+Perishers
 6107,6232,BWO,http://www.last.fm/music/BWO
-6120,6245,Мумий Тролль,http://www.last.fm/music/%D0%9C%D1%83%D0%BC%D0%B8%D0%B9+%D0%A2%D1%80%D0%BE%D0%BB%D0%BB%D1%8C
+6120,6245,\u041c\u0443\u043c\u0438\u0439 \u0422\u0440\u043e\u043b\u043b\u044c,http://www.last.fm/music/%D0%9C%D1%83%D0%BC%D0%B8%D0%B9+%D0%A2%D1%80%D0%BE%D0%BB%D0%BB%D1%8C
 6122,6247,Sugarcult,http://www.last.fm/music/Sugarcult
 6124,6249,Theory of a Deadman,http://www.last.fm/music/Theory+of+a+Deadman
 6131,6257,Rob Zombie,http://www.last.fm/music/Rob+Zombie
-6155,6282,Mägo de Oz,http://www.last.fm/music/M%C3%A4go+de+Oz
+6155,6282,M\xe4go de Oz,http://www.last.fm/music/M%C3%A4go+de+Oz
 6164,6291,Richie Sambora,http://www.last.fm/music/Richie+Sambora
 6166,6293,Straylight Run,http://www.last.fm/music/Straylight+Run
 6167,6294,Saves the Day,http://www.last.fm/music/Saves+the+Day
@@ -2563,17 +2563,17 @@
 6317,6459,Selena,http://www.last.fm/music/Selena
 6318,6460,The J. Geils Band,http://www.last.fm/music/The+J.+Geils+Band
 6330,6472,Djavan,http://www.last.fm/music/Djavan
-6355,6497,王菲,http://www.last.fm/music/%E7%8E%8B%E8%8F%B2
-6356,6498,盧巧音,http://www.last.fm/music/%E7%9B%A7%E5%B7%A7%E9%9F%B3
-6357,6499,莫文蔚,http://www.last.fm/music/%E8%8E%AB%E6%96%87%E8%94%9A
+6355,6497,\u738b\u83f2,http://www.last.fm/music/%E7%8E%8B%E8%8F%B2
+6356,6498,\u76e7\u5de7\u97f3,http://www.last.fm/music/%E7%9B%A7%E5%B7%A7%E9%9F%B3
+6357,6499,\u83ab\u6587\u851a,http://www.last.fm/music/%E8%8E%AB%E6%96%87%E8%94%9A
 6358,6500,Ibrahim Ferrer,http://www.last.fm/music/Ibrahim+Ferrer
 6359,6501,Jesse Cook,http://www.last.fm/music/Jesse+Cook
-6360,6502,陳奕迅,http://www.last.fm/music/%E9%99%B3%E5%A5%95%E8%BF%85
+6360,6502,\u9673\u5955\u8fc5,http://www.last.fm/music/%E9%99%B3%E5%A5%95%E8%BF%85
 6361,6503,Armik,http://www.last.fm/music/Armik
 6362,6504,Jon Secada,http://www.last.fm/music/Jon+Secada
 6363,6505,Estopa,http://www.last.fm/music/Estopa
-6364,6506,Paco de Lucía,http://www.last.fm/music/Paco+de+Luc%C3%ADa
-6365,6507,蕭亞軒,http://www.last.fm/music/%E8%95%AD%E4%BA%9E%E8%BB%92
+6364,6506,Paco de Luc\xeda,http://www.last.fm/music/Paco+de+Luc%C3%ADa
+6365,6507,\u856d\u4e9e\u8ed2,http://www.last.fm/music/%E8%95%AD%E4%BA%9E%E8%BB%92
 6367,6509,Domo,http://www.last.fm/music/Domo
 6374,6516,Chambao,http://www.last.fm/music/Chambao
 6385,6527,Miranda!,http://www.last.fm/music/Miranda%21
@@ -2628,7 +2628,7 @@
 6598,6743,Aztec Camera,http://www.last.fm/music/Aztec+Camera
 6610,6755,Kellplanet,http://www.last.fm/music/Kellplanet
 6611,6756,Amiina,http://www.last.fm/music/Amiina
-6613,6758,Stafrænn Hákon,http://www.last.fm/music/Stafr%C3%A6nn+H%C3%A1kon
+6613,6758,Stafr\xe6nn H\xe1kon,http://www.last.fm/music/Stafr%C3%A6nn+H%C3%A1kon
 6614,6759,This Will Destroy You,http://www.last.fm/music/This+Will+Destroy+You
 6615,6760,Conjure One,http://www.last.fm/music/Conjure+One
 6616,6761,Gregor Samsa,http://www.last.fm/music/Gregor+Samsa
@@ -2694,7 +2694,7 @@
 6835,6980,Between Interval,http://www.last.fm/music/Between+Interval
 6837,6982,Staruha Mha,http://www.last.fm/music/Staruha+Mha
 6855,7007,De-Phazz,http://www.last.fm/music/De-Phazz
-6856,7008,Пилот,http://www.last.fm/music/%D0%9F%D0%B8%D0%BB%D0%BE%D1%82
+6856,7008,\u041f\u0438\u043b\u043e\u0442,http://www.last.fm/music/%D0%9F%D0%B8%D0%BB%D0%BE%D1%82
 6858,7010,Magnitarus,http://www.last.fm/music/Magnitarus
 6859,7011,Blind Divine,http://www.last.fm/music/Blind+Divine
 6860,7012,Ab Ovo,http://www.last.fm/music/Ab+Ovo
@@ -2718,7 +2718,7 @@
 6922,7074,British Sea Power,http://www.last.fm/music/British+Sea+Power
 6923,7075,Mylo,http://www.last.fm/music/Mylo
 6924,7076,Gang of Four,http://www.last.fm/music/Gang+of+Four
-6925,7077,Babasónicos,http://www.last.fm/music/Babas%C3%B3nicos
+6925,7077,Babas\xf3nicos,http://www.last.fm/music/Babas%C3%B3nicos
 6926,7078,Zeromancer,http://www.last.fm/music/Zeromancer
 6927,7079,Moderat,http://www.last.fm/music/Moderat
 6944,7096,Michael Nyman,http://www.last.fm/music/Michael+Nyman
@@ -2798,7 +2798,7 @@
 7293,7449,Lillix,http://www.last.fm/music/Lillix
 7294,7450,Luka,http://www.last.fm/music/Luka
 7296,7452,Danni Carlos,http://www.last.fm/music/Danni+Carlos
-7300,7456,Detektivbyrån,http://www.last.fm/music/Detektivbyr%C3%A5n
+7300,7456,Detektivbyr\xe5n,http://www.last.fm/music/Detektivbyr%C3%A5n
 7314,7470,LFO,http://www.last.fm/music/LFO
 7317,7473,Polygon Window,http://www.last.fm/music/Polygon+Window
 7323,7479,Com Truise,http://www.last.fm/music/Com+Truise
@@ -2807,14 +2807,14 @@
 7354,7512,Faderhead,http://www.last.fm/music/Faderhead
 7357,7515,The Whip,http://www.last.fm/music/The+Whip
 7367,7525,Paul Weller,http://www.last.fm/music/Paul+Weller
-7372,7530,Café Tacuba,http://www.last.fm/music/Caf%C3%A9+Tacuba
-7375,7533,Sinéad O'Connor,http://www.last.fm/music/Sin%C3%A9ad+O%27Connor
+7372,7530,Caf\xe9 Tacuba,http://www.last.fm/music/Caf%C3%A9+Tacuba
+7375,7533,Sin\xe9ad O'Connor,http://www.last.fm/music/Sin%C3%A9ad+O%27Connor
 7403,7561,Orchestra Baobab,http://www.last.fm/music/Orchestra+Baobab
-7424,7582,Ali Farka Touré & Toumani Diabaté,http://www.last.fm/music/Ali%2BFarka%2BTour%25C3%25A9%2B%2526%2BToumani%2BDiabat%25C3%25A9
+7424,7582,Ali Farka Tour\xe9 & Toumani Diabat\xe9,http://www.last.fm/music/Ali%2BFarka%2BTour%25C3%25A9%2B%2526%2BToumani%2BDiabat%25C3%25A9
 7425,7583,Geraldo Pino,http://www.last.fm/music/Geraldo+Pino
 7428,7586,Youssou N'Dour,http://www.last.fm/music/Youssou+N%27Dour
-7438,7596,Mory Kanté,http://www.last.fm/music/Mory+Kant%C3%A9
-7462,7620,비,http://www.last.fm/music/%EB%B9%84
+7438,7596,Mory Kant\xe9,http://www.last.fm/music/Mory+Kant%C3%A9
+7462,7620,\ube44,http://www.last.fm/music/%EB%B9%84
 7467,7625,The Presidents of the United States of America,http://www.last.fm/music/The+Presidents+of+the+United+States+of+America
 7468,7626,Mina,http://www.last.fm/music/Mina
 7481,7639,Mudvayne,http://www.last.fm/music/Mudvayne
@@ -2847,7 +2847,7 @@
 7604,7781,Clare Maguire,http://www.last.fm/music/Clare+Maguire
 7609,7792,Manfred Mann's Earth Band,http://www.last.fm/music/Manfred+Mann%27s+Earth+Band
 7613,7796,Bang,http://www.last.fm/music/Bang
-7616,7799,O Terço,http://www.last.fm/music/O+Ter%C3%A7o
+7616,7799,O Ter\xe7o,http://www.last.fm/music/O+Ter%C3%A7o
 7617,7800,Traffic,http://www.last.fm/music/Traffic
 7627,7810,Elsiane,http://www.last.fm/music/Elsiane
 7628,7811,Crustation,http://www.last.fm/music/Crustation
@@ -2877,11 +2877,11 @@
 7762,7945,Lissy Trullie,http://www.last.fm/music/Lissy+Trullie
 7811,7994,Sergey Lazarev,http://www.last.fm/music/Sergey+Lazarev
 7841,8026,Fuck Buttons,http://www.last.fm/music/Fuck+Buttons
-7842,8027,Jónsi & Alex,http://www.last.fm/music/J%25C3%25B3nsi%2B%2526%2BAlex
+7842,8027,J\xf3nsi & Alex,http://www.last.fm/music/J%25C3%25B3nsi%2B%2526%2BAlex
 7857,8042,Live,http://www.last.fm/music/Live
 7858,8043,Idlewild,http://www.last.fm/music/Idlewild
 7862,8047,Plumb,http://www.last.fm/music/Plumb
-7869,8054,The Dø,http://www.last.fm/music/The+D%C3%B8
+7869,8054,The D\xf8,http://www.last.fm/music/The+D%C3%B8
 7871,8056,Charlie Winston,http://www.last.fm/music/Charlie+Winston
 7882,8067,Estelle,http://www.last.fm/music/Estelle
 7883,8068,Moloko,http://www.last.fm/music/Moloko
@@ -2932,7 +2932,7 @@
 8171,8364,Sean Kingston,http://www.last.fm/music/Sean+Kingston
 8174,8367,EMF,http://www.last.fm/music/EMF
 8177,8370,Axel Fernando,http://www.last.fm/music/Axel+Fernando
-8178,8371,Maná,http://www.last.fm/music/Man%C3%A1
+8178,8371,Man\xe1,http://www.last.fm/music/Man%C3%A1
 8179,8372,Ricardo Arjona,http://www.last.fm/music/Ricardo+Arjona
 8182,8375,Alex Ubago,http://www.last.fm/music/Alex+Ubago
 8195,8388,Viking Quest,http://www.last.fm/music/Viking+Quest
@@ -2941,7 +2941,7 @@
 8220,8420,Lake of Tears,http://www.last.fm/music/Lake+of+Tears
 8221,8422,Meat Loaf,http://www.last.fm/music/Meat+Loaf
 8222,8423,Great White,http://www.last.fm/music/Great+White
-8230,8431,Erkan Oğur,http://www.last.fm/music/Erkan+O%C4%9Fur
+8230,8431,Erkan O\u011fur,http://www.last.fm/music/Erkan+O%C4%9Fur
 8237,8438,Beth Gibbons & Rustin Man,http://www.last.fm/music/Beth%2BGibbons%2B%2526%2BRustin%2BMan
 8244,8445,Niyaz,http://www.last.fm/music/Niyaz
 8258,8459,mewithoutYou,http://www.last.fm/music/mewithoutYou
@@ -2997,7 +2997,7 @@
 8504,8710,Moptop,http://www.last.fm/music/Moptop
 8509,8715,Milla Jovovich,http://www.last.fm/music/Milla+Jovovich
 8513,8722,Everlast,http://www.last.fm/music/Everlast
-8514,8724,Nívea Soares,http://www.last.fm/music/N%C3%ADvea+Soares
+8514,8724,N\xedvea Soares,http://www.last.fm/music/N%C3%ADvea+Soares
 8518,8728,Oficina G3,http://www.last.fm/music/Oficina+G3
 8522,8732,Fernandinho,http://www.last.fm/music/Fernandinho
 8533,8743,REO Speedwagon,http://www.last.fm/music/REO+Speedwagon
@@ -3018,7 +3018,7 @@
 8608,8818,Harry Belafonte,http://www.last.fm/music/Harry+Belafonte
 8610,8820,Commodores,http://www.last.fm/music/Commodores
 8611,8821,Charlie Musselwhite,http://www.last.fm/music/Charlie+Musselwhite
-8619,8829,梅林茂,http://www.last.fm/music/%E6%A2%85%E6%9E%97%E8%8C%82
+8619,8829,\u6885\u6797\u8302,http://www.last.fm/music/%E6%A2%85%E6%9E%97%E8%8C%82
 8620,8830,The Coral,http://www.last.fm/music/The+Coral
 8621,8831,The House of Love,http://www.last.fm/music/The+House+of+Love
 8627,8837,Charlie Parker,http://www.last.fm/music/Charlie+Parker
@@ -3033,21 +3033,21 @@
 8761,8994,Loverboy,http://www.last.fm/music/Loverboy
 8762,8995,Andy Taylor,http://www.last.fm/music/Andy+Taylor
 8765,8998,Kool & The Gang,http://www.last.fm/music/Kool%2B%2526%2BThe%2BGang
-8780,9013,鷺巣詩郎,http://www.last.fm/music/%E9%B7%BA%E5%B7%A3%E8%A9%A9%E9%83%8E
+8780,9013,\u9dfa\u5de3\u8a69\u90ce,http://www.last.fm/music/%E9%B7%BA%E5%B7%A3%E8%A9%A9%E9%83%8E
 8799,9032,France Gall,http://www.last.fm/music/France+Gall
 8801,9034,Bimbo Boy,http://www.last.fm/music/Bimbo+Boy
 8846,9079,Bethany Joy Lenz,http://www.last.fm/music/Bethany+Joy+Lenz
-8856,9089,川田まみ,http://www.last.fm/music/%E5%B7%9D%E7%94%B0%E3%81%BE%E3%81%BF
+8856,9089,\u5ddd\u7530\u307e\u307f,http://www.last.fm/music/%E5%B7%9D%E7%94%B0%E3%81%BE%E3%81%BF
 8899,9132,Elefant,http://www.last.fm/music/Elefant
 8908,9141,Android Lust,http://www.last.fm/music/Android+Lust
 8923,9156,Libra,http://www.last.fm/music/Libra
 8927,9160,Mark Ronson,http://www.last.fm/music/Mark+Ronson
 8931,9164,Ao Cubo,http://www.last.fm/music/Ao+Cubo
-8937,9170,Só Pra Contrariar,http://www.last.fm/music/S%C3%B3+Pra+Contrariar
+8937,9170,S\xf3 Pra Contrariar,http://www.last.fm/music/S%C3%B3+Pra+Contrariar
 8954,9187,Hillsong United,http://www.last.fm/music/Hillsong+United
 8960,9193,Vertical Horizon,http://www.last.fm/music/Vertical+Horizon
 8962,9195,Ludmila Ferber,http://www.last.fm/music/Ludmila+Ferber
-8995,9228,Zé Ramalho,http://www.last.fm/music/Z%C3%A9+Ramalho
+8995,9228,Z\xe9 Ramalho,http://www.last.fm/music/Z%C3%A9+Ramalho
 8997,9230,Gram,http://www.last.fm/music/Gram
 9001,9234,Lasgo,http://www.last.fm/music/Lasgo
 9009,9242,Kittie,http://www.last.fm/music/Kittie
@@ -3130,11 +3130,11 @@
 9311,9544,Conor Oberst and the Mystic Valley Band,http://www.last.fm/music/Conor+Oberst+and+the+Mystic+Valley+Band
 9312,9545,Smog,http://www.last.fm/music/Smog
 9316,9549,Hope,http://www.last.fm/music/Hope
-9322,9555,芸能山城組,http://www.last.fm/music/%E8%8A%B8%E8%83%BD%E5%B1%B1%E5%9F%8E%E7%B5%84
+9322,9555,\u82b8\u80fd\u5c71\u57ce\u7d44,http://www.last.fm/music/%E8%8A%B8%E8%83%BD%E5%B1%B1%E5%9F%8E%E7%B5%84
 9329,9562,David Arnold,http://www.last.fm/music/David+Arnold
 9350,9583,Caroline,http://www.last.fm/music/Caroline
-9352,9585,椎名林檎,http://www.last.fm/music/%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E
-9354,9587,東京事変,http://www.last.fm/music/%E6%9D%B1%E4%BA%AC%E4%BA%8B%E5%A4%89
+9352,9585,\u690e\u540d\u6797\u6a8e,http://www.last.fm/music/%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E
+9354,9587,\u6771\u4eac\u4e8b\u5909,http://www.last.fm/music/%E6%9D%B1%E4%BA%AC%E4%BA%8B%E5%A4%89
 9360,9593,Derrick Morgan,http://www.last.fm/music/Derrick+Morgan
 9365,9598,Jimmy Cliff,http://www.last.fm/music/Jimmy+Cliff
 9396,9629,Edwyn Collins,http://www.last.fm/music/Edwyn+Collins
@@ -3150,11 +3150,11 @@
 9439,9672,Lights Out Asia,http://www.last.fm/music/Lights+Out+Asia
 9461,9694,Azad,http://www.last.fm/music/Azad
 9466,9699,Joan Baez,http://www.last.fm/music/Joan+Baez
-9467,9700,Nara Leão,http://www.last.fm/music/Nara+Le%C3%A3o
+9467,9700,Nara Le\xe3o,http://www.last.fm/music/Nara+Le%C3%A3o
 9482,9716,Buckethead,http://www.last.fm/music/Buckethead
 9500,9734,Mustafa Sandal,http://www.last.fm/music/Mustafa+Sandal
 9503,9737,Superbus,http://www.last.fm/music/Superbus
-9506,9740,周杰倫,http://www.last.fm/music/%E5%91%A8%E6%9D%B0%E5%80%AB
+9506,9740,\u5468\u6770\u502b,http://www.last.fm/music/%E5%91%A8%E6%9D%B0%E5%80%AB
 9508,9742,Najoua Belyzel,http://www.last.fm/music/Najoua+Belyzel
 9517,9751,The Kelly Family,http://www.last.fm/music/The+Kelly+Family
 9531,9765,Element Eighty,http://www.last.fm/music/Element+Eighty
@@ -3191,7 +3191,7 @@
 9741,9997,Pan Sonic,http://www.last.fm/music/Pan+Sonic
 9743,9999,Mortiis,http://www.last.fm/music/Mortiis
 9744,10000,Mantis Psi,http://www.last.fm/music/Mantis+Psi
-9746,10002,Hildur Guðnadóttir,http://www.last.fm/music/Hildur+Gu%C3%B0nad%C3%B3ttir
+9746,10002,Hildur Gu\xf0nad\xf3ttir,http://www.last.fm/music/Hildur+Gu%C3%B0nad%C3%B3ttir
 9749,10005,Borko,http://www.last.fm/music/Borko
 9751,10007,Dvar,http://www.last.fm/music/Dvar
 9760,10016,Nikka Costa,http://www.last.fm/music/Nikka+Costa
@@ -3216,11 +3216,11 @@
 9899,10164,Muslimgauze,http://www.last.fm/music/Muslimgauze
 9907,10172,Pati Yang,http://www.last.fm/music/Pati+Yang
 9943,10214,Sleater-Kinney,http://www.last.fm/music/Sleater-Kinney
-9955,10226,鈴木あみ,http://www.last.fm/music/%E9%88%B4%E6%9C%A8%E3%81%82%E3%81%BF
+9955,10226,\u9234\u6728\u3042\u307f,http://www.last.fm/music/%E9%88%B4%E6%9C%A8%E3%81%82%E3%81%BF
 9962,10233,Buono!,http://www.last.fm/music/Buono%21
 10014,10299,Corpore,http://www.last.fm/music/Corpore
 10015,10300,Tourniquet,http://www.last.fm/music/Tourniquet
-10020,10305,Sôber,http://www.last.fm/music/S%C3%B4ber
+10020,10305,S\xf4ber,http://www.last.fm/music/S%C3%B4ber
 10021,10306,dc Talk,http://www.last.fm/music/dc+Talk
 10024,10309,The Red Chord,http://www.last.fm/music/The+Red+Chord
 10025,10310,Sevendust,http://www.last.fm/music/Sevendust
@@ -3234,7 +3234,7 @@
 10117,10402,Mad Sin,http://www.last.fm/music/Mad+Sin
 10119,10404,Calabrese,http://www.last.fm/music/Calabrese
 10127,10412,"Crosby, Stills, Nash & Young",http://www.last.fm/music/Crosby%252C%2BStills%252C%2BNash%2B%2526%2BYoung
-10128,10413,Tom Zé,http://www.last.fm/music/Tom+Z%C3%A9
+10128,10413,Tom Z\xe9,http://www.last.fm/music/Tom+Z%C3%A9
 10148,10433,Bomfunk MC's,http://www.last.fm/music/Bomfunk+MC%27s
 10175,10460,LS Jack,http://www.last.fm/music/LS+Jack
 10227,10515,dEUS,http://www.last.fm/music/dEUS
@@ -3266,7 +3266,7 @@
 10350,10638,Connie Francis,http://www.last.fm/music/Connie+Francis
 10362,10650,Oceana,http://www.last.fm/music/Oceana
 10369,10657,The Like,http://www.last.fm/music/The+Like
-10374,10662,Hüsker Dü,http://www.last.fm/music/H%C3%BCsker+D%C3%BC
+10374,10662,H\xfcsker D\xfc,http://www.last.fm/music/H%C3%BCsker+D%C3%BC
 10389,10681,Morningwood,http://www.last.fm/music/Morningwood
 10393,10685,Electrocute,http://www.last.fm/music/Electrocute
 10399,10691,Madredeus,http://www.last.fm/music/Madredeus
@@ -3335,14 +3335,14 @@
 10900,11244,Youth Group,http://www.last.fm/music/Youth+Group
 10909,11253,Better Than Ezra,http://www.last.fm/music/Better+Than+Ezra
 10916,11267,Message to Bears,http://www.last.fm/music/Message+to+Bears
-10917,11268,Мельница,http://www.last.fm/music/%D0%9C%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0
+10917,11268,\u041c\u0435\u043b\u044c\u043d\u0438\u0446\u0430,http://www.last.fm/music/%D0%9C%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0
 10929,11285,Mission of Burma,http://www.last.fm/music/Mission+of+Burma
 10947,11303,Aliceffekt,http://www.last.fm/music/Aliceffekt
 10980,11336,Billy Ocean,http://www.last.fm/music/Billy+Ocean
-10981,11337,Мирбек Атабеков,http://www.last.fm/music/%D0%9C%D0%B8%D1%80%D0%B1%D0%B5%D0%BA+%D0%90%D1%82%D0%B0%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2
-10982,11338,MFÖ,http://www.last.fm/music/MF%C3%96
+10981,11337,\u041c\u0438\u0440\u0431\u0435\u043a \u0410\u0442\u0430\u0431\u0435\u043a\u043e\u0432,http://www.last.fm/music/%D0%9C%D0%B8%D1%80%D0%B1%D0%B5%D0%BA+%D0%90%D1%82%D0%B0%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2
+10982,11338,MF\xd6,http://www.last.fm/music/MF%C3%96
 10983,11339,Jody Watley,http://www.last.fm/music/Jody+Watley
-10985,11341,Султан Садыралиев,http://www.last.fm/music/%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+%D0%A1%D0%B0%D0%B4%D1%8B%D1%80%D0%B0%D0%BB%D0%B8%D0%B5%D0%B2
+10985,11341,\u0421\u0443\u043b\u0442\u0430\u043d \u0421\u0430\u0434\u044b\u0440\u0430\u043b\u0438\u0435\u0432,http://www.last.fm/music/%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+%D0%A1%D0%B0%D0%B4%D1%8B%D1%80%D0%B0%D0%BB%D0%B8%D0%B5%D0%B2
 10986,11342,Urker,http://www.last.fm/music/Urker
 10987,11343,Kargo,http://www.last.fm/music/Kargo
 10988,11344,Muzart,http://www.last.fm/music/Muzart
@@ -3383,7 +3383,7 @@
 11294,11682,Wayne Shorter,http://www.last.fm/music/Wayne+Shorter
 11302,11690,Sabrina,http://www.last.fm/music/Sabrina
 11316,11712,Yndi Halda,http://www.last.fm/music/Yndi+Halda
-11323,11722,Юлия Савичева,http://www.last.fm/music/%D0%AE%D0%BB%D0%B8%D1%8F+%D0%A1%D0%B0%D0%B2%D0%B8%D1%87%D0%B5%D0%B2%D0%B0
+11323,11722,\u042e\u043b\u0438\u044f \u0421\u0430\u0432\u0438\u0447\u0435\u0432\u0430,http://www.last.fm/music/%D0%AE%D0%BB%D0%B8%D1%8F+%D0%A1%D0%B0%D0%B2%D0%B8%D1%87%D0%B5%D0%B2%D0%B0
 11325,11724,Mark Owen,http://www.last.fm/music/Mark+Owen
 11326,11725,BBMak,http://www.last.fm/music/BBMak
 11327,11726,Cherry Ghost,http://www.last.fm/music/Cherry+Ghost
@@ -3447,12 +3447,12 @@
 11697,12120,Grant Green,http://www.last.fm/music/Grant+Green
 11706,12129,Barry Manilow,http://www.last.fm/music/Barry+Manilow
 11707,12130,Stereo Total,http://www.last.fm/music/Stereo+Total
-11714,12137,Sérgio Mendes,http://www.last.fm/music/S%C3%A9rgio+Mendes
+11714,12137,S\xe9rgio Mendes,http://www.last.fm/music/S%C3%A9rgio+Mendes
 11718,12141,Melody Gardot,http://www.last.fm/music/Melody+Gardot
 11738,12164,Amanda Palmer,http://www.last.fm/music/Amanda+Palmer
 11739,12165,The Long Blondes,http://www.last.fm/music/The+Long+Blondes
 11768,12194,Lisa Loeb,http://www.last.fm/music/Lisa+Loeb
-11769,12195,Señor Coconut,http://www.last.fm/music/Se%C3%B1or+Coconut
+11769,12195,Se\xf1or Coconut,http://www.last.fm/music/Se%C3%B1or+Coconut
 11775,12201,Sun Kil Moon,http://www.last.fm/music/Sun+Kil+Moon
 11779,12205,The Velvet Teen,http://www.last.fm/music/The+Velvet+Teen
 11792,12218,Cheap Mondays,http://www.last.fm/music/Cheap+Mondays
@@ -3479,7 +3479,7 @@
 12101,12548,Shannon Wright,http://www.last.fm/music/Shannon+Wright
 12103,12550,Sono,http://www.last.fm/music/Sono
 12105,12552,Hypernova,http://www.last.fm/music/Hypernova
-12108,12555,Ximena Sariñana,http://www.last.fm/music/Ximena+Sari%C3%B1ana
+12108,12555,Ximena Sari\xf1ana,http://www.last.fm/music/Ximena+Sari%C3%B1ana
 12152,12599,Harry Nilsson,http://www.last.fm/music/Harry+Nilsson
 12167,12623,"Peter, Paul & Mary",http://www.last.fm/music/Peter%252C%2BPaul%2B%2526%2BMary
 12189,12645,Joe Colombo,http://www.last.fm/music/Joe+Colombo
@@ -3501,7 +3501,7 @@
 12434,12890,Bliss,http://www.last.fm/music/Bliss
 12441,12918,Band of Skulls,http://www.last.fm/music/Band+of+Skulls
 12451,12928,Keiko Matsui,http://www.last.fm/music/Keiko+Matsui
-12467,12946,Ministério Vida de Adoração,http://www.last.fm/music/Minist%C3%A9rio+Vida+de+Adora%C3%A7%C3%A3o
+12467,12946,Minist\xe9rio Vida de Adora\xe7\xe3o,http://www.last.fm/music/Minist%C3%A9rio+Vida+de+Adora%C3%A7%C3%A3o
 12468,12947,Shawn McDonald,http://www.last.fm/music/Shawn+McDonald
 12469,12948,Day of Fire,http://www.last.fm/music/Day+of+Fire
 12470,12949,Mainstay,http://www.last.fm/music/Mainstay
@@ -3556,12 +3556,12 @@
 12867,13357,Thomas Anders,http://www.last.fm/music/Thomas+Anders
 12873,13363,Christophe Willem,http://www.last.fm/music/Christophe+Willem
 12874,13364,Mark Medlock,http://www.last.fm/music/Mark+Medlock
-12878,13368,Mediæval Bæbes,http://www.last.fm/music/Medi%C3%A6val+B%C3%A6bes
+12878,13368,Medi\xe6val B\xe6bes,http://www.last.fm/music/Medi%C3%A6val+B%C3%A6bes
 12882,13372,Blue Man Group,http://www.last.fm/music/Blue+Man+Group
 12903,13393,Bitter:Sweet,http://www.last.fm/music/Bitter%3ASweet
 12905,13395,Vinicius de Moraes,http://www.last.fm/music/Vinicius+de+Moraes
 12907,13397,Nick Cave & Warren Ellis,http://www.last.fm/music/Nick%2BCave%2B%2526%2BWarren%2BEllis
-12909,13399,HṚṢṬA,http://www.last.fm/music/H%E1%B9%9A%E1%B9%A2%E1%B9%ACA
+12909,13399,H\u1e5a\u1e62\u1e6cA,http://www.last.fm/music/H%E1%B9%9A%E1%B9%A2%E1%B9%ACA
 12912,13406,Louis XIV,http://www.last.fm/music/Louis+XIV
 12917,13413,Dolly,http://www.last.fm/music/Dolly
 12919,13415,Neurotic Outsiders,http://www.last.fm/music/Neurotic+Outsiders
@@ -3611,7 +3611,7 @@
 13335,13900,Real Life,http://www.last.fm/music/Real+Life
 13338,13904,The Glitch Mob,http://www.last.fm/music/The+Glitch+Mob
 13369,13935,A.C.T,http://www.last.fm/music/A.C.T
-13373,13939,Júpiter Maçã,http://www.last.fm/music/J%C3%BApiter+Ma%C3%A7%C3%A3
+13373,13939,J\xfapiter Ma\xe7\xe3,http://www.last.fm/music/J%C3%BApiter+Ma%C3%A7%C3%A3
 13375,13941,Marcos Valle,http://www.last.fm/music/Marcos+Valle
 13381,13947,Iron Jesus,http://www.last.fm/music/Iron+Jesus
 13384,13950,Moondog,http://www.last.fm/music/Moondog
@@ -3633,12 +3633,12 @@
 13525,14111,Flux of Pink Indians,http://www.last.fm/music/Flux+of+Pink+Indians
 13529,14115,Zounds,http://www.last.fm/music/Zounds
 13530,14116,Conflict,http://www.last.fm/music/Conflict
-13537,14123,Арчер,http://www.last.fm/music/%D0%90%D1%80%D1%87%D0%B5%D1%80
+13537,14123,\u0410\u0440\u0447\u0435\u0440,http://www.last.fm/music/%D0%90%D1%80%D1%87%D0%B5%D1%80
 13541,14127,Wolfgang Parker,http://www.last.fm/music/Wolfgang+Parker
-13542,14128,Дочь Монро и Кеннеди,http://www.last.fm/music/%D0%94%D0%BE%D1%87%D1%8C+%D0%9C%D0%BE%D0%BD%D1%80%D0%BE+%D0%B8+%D0%9A%D0%B5%D0%BD%D0%BD%D0%B5%D0%B4%D0%B8
+13542,14128,\u0414\u043e\u0447\u044c \u041c\u043e\u043d\u0440\u043e \u0438 \u041a\u0435\u043d\u043d\u0435\u0434\u0438,http://www.last.fm/music/%D0%94%D0%BE%D1%87%D1%8C+%D0%9C%D0%BE%D0%BD%D1%80%D0%BE+%D0%B8+%D0%9A%D0%B5%D0%BD%D0%BD%D0%B5%D0%B4%D0%B8
 13598,14184,Sleeping at Last,http://www.last.fm/music/Sleeping+at+Last
 13599,14185,Brooke Fraser,http://www.last.fm/music/Brooke+Fraser
-13615,14201,Стук бамбука в 11 часов,http://www.last.fm/music/%D0%A1%D1%82%D1%83%D0%BA+%D0%B1%D0%B0%D0%BC%D0%B1%D1%83%D0%BA%D0%B0+%D0%B2+11+%D1%87%D0%B0%D1%81%D0%BE%D0%B2
+13615,14201,\u0421\u0442\u0443\u043a \u0431\u0430\u043c\u0431\u0443\u043a\u0430 \u0432 11 \u0447\u0430\u0441\u043e\u0432,http://www.last.fm/music/%D0%A1%D1%82%D1%83%D0%BA+%D0%B1%D0%B0%D0%BC%D0%B1%D1%83%D0%BA%D0%B0+%D0%B2+11+%D1%87%D0%B0%D1%81%D0%BE%D0%B2
 13622,14208,As Cities Burn,http://www.last.fm/music/As+Cities+Burn
 13636,14222,Husky Rescue,http://www.last.fm/music/Husky+Rescue
 13639,14225,Doom,http://www.last.fm/music/Doom
@@ -3648,7 +3648,7 @@
 13704,14300,Cee-Lo,http://www.last.fm/music/Cee-Lo
 13728,14324,Sailor Moon,http://www.last.fm/music/Sailor+Moon
 13733,14329,Edwin McCain,http://www.last.fm/music/Edwin+McCain
-13743,14341,Papas da Língua,http://www.last.fm/music/Papas+da+L%C3%ADngua
+13743,14341,Papas da L\xedngua,http://www.last.fm/music/Papas+da+L%C3%ADngua
 13761,14359,Orson,http://www.last.fm/music/Orson
 13779,14378,13th Floor Elevators,http://www.last.fm/music/13th+Floor+Elevators
 13787,14392,Acoustic Alchemy,http://www.last.fm/music/Acoustic+Alchemy
@@ -3668,10 +3668,10 @@
 13936,14576,Luciana Mello,http://www.last.fm/music/Luciana+Mello
 13938,14578,Marina Elali,http://www.last.fm/music/Marina+Elali
 13939,14579,Toquinho,http://www.last.fm/music/Toquinho
-13951,14591,タッキー＆翼,http://www.last.fm/music/%E3%82%BF%E3%83%83%E3%82%AD%E3%83%BC%EF%BC%86%E7%BF%BC
-13953,14593,滝沢秀明,http://www.last.fm/music/%E6%BB%9D%E6%B2%A2%E7%A7%80%E6%98%8E
-13954,14594,羅志祥,http://www.last.fm/music/%E7%BE%85%E5%BF%97%E7%A5%A5
-13955,14595,今井翼,http://www.last.fm/music/%E4%BB%8A%E4%BA%95%E7%BF%BC
+13951,14591,\u30bf\u30c3\u30ad\u30fc\uff06\u7ffc,http://www.last.fm/music/%E3%82%BF%E3%83%83%E3%82%AD%E3%83%BC%EF%BC%86%E7%BF%BC
+13953,14593,\u6edd\u6ca2\u79c0\u660e,http://www.last.fm/music/%E6%BB%9D%E6%B2%A2%E7%A7%80%E6%98%8E
+13954,14594,\u7f85\u5fd7\u7965,http://www.last.fm/music/%E7%BE%85%E5%BF%97%E7%A5%A5
+13955,14595,\u4eca\u4e95\u7ffc,http://www.last.fm/music/%E4%BB%8A%E4%BA%95%E7%BF%BC
 13974,14620,Billy Preston,http://www.last.fm/music/Billy+Preston
 13983,14629,Lipstick,http://www.last.fm/music/Lipstick
 13987,14633,black room,http://www.last.fm/music/black+room
@@ -3683,7 +3683,7 @@
 14017,14669,Karlheinz Stockhausen,http://www.last.fm/music/Karlheinz+Stockhausen
 14018,14670,Felix Kubin,http://www.last.fm/music/Felix+Kubin
 14020,14672,Luc Ferrari,http://www.last.fm/music/Luc+Ferrari
-14021,14673,Erlend Øye,http://www.last.fm/music/Erlend+%C3%98ye
+14021,14673,Erlend \xd8ye,http://www.last.fm/music/Erlend+%C3%98ye
 14028,14680,Northern Lite,http://www.last.fm/music/Northern+Lite
 14033,14685,Shivaree,http://www.last.fm/music/Shivaree
 14040,14692,(hed) Planet Earth,http://www.last.fm/music/%28hed%29+Planet+Earth
@@ -3707,7 +3707,7 @@
 14351,15055,Fear Before the March of Flames,http://www.last.fm/music/Fear+Before+the+March+of+Flames
 14354,15058,Urban Myth Club,http://www.last.fm/music/Urban+Myth+Club
 14360,15064,Belleruche,http://www.last.fm/music/Belleruche
-14370,15074,Ünloco,http://www.last.fm/music/%C3%9Cnloco
+14370,15074,\xdcnloco,http://www.last.fm/music/%C3%9Cnloco
 14379,15083,Mondo Grosso,http://www.last.fm/music/Mondo+Grosso
 14386,15090,Plus-Tech Squeeze Box,http://www.last.fm/music/Plus-Tech+Squeeze+Box
 14396,15100,James Dean Bradfield,http://www.last.fm/music/James+Dean+Bradfield
@@ -3729,7 +3729,7 @@
 14561,15301,Bo Diddley,http://www.last.fm/music/Bo+Diddley
 14575,15315,Xela,http://www.last.fm/music/Xela
 14582,15322,Filipe Guerra,http://www.last.fm/music/Filipe+Guerra
-14585,15325,玉置成実,http://www.last.fm/music/%E7%8E%89%E7%BD%AE%E6%88%90%E5%AE%9F
+14585,15325,\u7389\u7f6e\u6210\u5b9f,http://www.last.fm/music/%E7%8E%89%E7%BD%AE%E6%88%90%E5%AE%9F
 14617,15361,Bobby Darin,http://www.last.fm/music/Bobby+Darin
 14622,15368,Milla,http://www.last.fm/music/Milla
 14643,15391,Al Green,http://www.last.fm/music/Al+Green
@@ -3765,7 +3765,7 @@
 14967,15751,The Waterboys,http://www.last.fm/music/The+Waterboys
 14968,15752,A Camp,http://www.last.fm/music/A+Camp
 14987,15771,The Boomtown Rats,http://www.last.fm/music/The+Boomtown+Rats
-15008,15792,Lützenkirchen,http://www.last.fm/music/L%C3%BCtzenkirchen
+15008,15792,L\xfctzenkirchen,http://www.last.fm/music/L%C3%BCtzenkirchen
 15011,15795,Alter Ego,http://www.last.fm/music/Alter+Ego
 15017,15801,Pier Bucci,http://www.last.fm/music/Pier+Bucci
 15029,15813,mO Body,http://www.last.fm/music/mO+Body
@@ -3776,7 +3776,7 @@
 15129,15920,Anita Baker,http://www.last.fm/music/Anita+Baker
 15131,15922,Montell Jordan,http://www.last.fm/music/Montell+Jordan
 15132,15923,Bizzy Bone,http://www.last.fm/music/Bizzy+Bone
-15172,15963,Филипп Киркоров,http://www.last.fm/music/%D0%A4%D0%B8%D0%BB%D0%B8%D0%BF%D0%BF+%D0%9A%D0%B8%D1%80%D0%BA%D0%BE%D1%80%D0%BE%D0%B2
+15172,15963,\u0424\u0438\u043b\u0438\u043f\u043f \u041a\u0438\u0440\u043a\u043e\u0440\u043e\u0432,http://www.last.fm/music/%D0%A4%D0%B8%D0%BB%D0%B8%D0%BF%D0%BF+%D0%9A%D0%B8%D1%80%D0%BA%D0%BE%D1%80%D0%BE%D0%B2
 15183,15974,My Endeavour,http://www.last.fm/music/My+Endeavour
 15200,15991,Abecedarians,http://www.last.fm/music/Abecedarians
 15203,15994,The Grates,http://www.last.fm/music/The+Grates
@@ -3827,7 +3827,7 @@
 15906,16778,reigndear,http://www.last.fm/music/reigndear
 15941,16833,T.S.O.L.,http://www.last.fm/music/T.S.O.L.
 15968,16860,Karsh Kale,http://www.last.fm/music/Karsh+Kale
-15969,16861,Habib Koité & Bamada,http://www.last.fm/music/Habib%2BKoit%25C3%25A9%2B%2526%2BBamada
+15969,16861,Habib Koit\xe9 & Bamada,http://www.last.fm/music/Habib%2BKoit%25C3%25A9%2B%2526%2BBamada
 15970,16862,Milivoj Culibrk,http://www.last.fm/music/Milivoj+Culibrk
 15983,16875,Bankrupt,http://www.last.fm/music/Bankrupt
 16000,16892,Go Betty Go,http://www.last.fm/music/Go+Betty+Go
@@ -3839,18 +3839,18 @@
 16121,17048,Waldeck,http://www.last.fm/music/Waldeck
 16128,17055,Richard Thompson,http://www.last.fm/music/Richard+Thompson
 16140,17067,A Hawk and a Hacksaw,http://www.last.fm/music/A+Hawk+and+a+Hacksaw
-16180,17109,Osman Murat Tuğsuz,http://www.last.fm/music/Osman+Murat+Tu%C4%9Fsuz
+16180,17109,Osman Murat Tu\u011fsuz,http://www.last.fm/music/Osman+Murat+Tu%C4%9Fsuz
 16191,17120,Nass Marrakech,http://www.last.fm/music/Nass+Marrakech
-16203,17132,Serkan Süleymaniye,http://www.last.fm/music/Serkan+S%C3%BCleymaniye
+16203,17132,Serkan S\xfcleymaniye,http://www.last.fm/music/Serkan+S%C3%BCleymaniye
 16213,17142,Infadels,http://www.last.fm/music/Infadels
 16224,17153,BFF,http://www.last.fm/music/BFF
 16228,17157,Nick Lowe,http://www.last.fm/music/Nick+Lowe
 16237,17166,The Knack,http://www.last.fm/music/The+Knack
-16260,17189,dälek,http://www.last.fm/music/d%C3%A4lek
+16260,17189,d\xe4lek,http://www.last.fm/music/d%C3%A4lek
 16282,17211,The Troggs,http://www.last.fm/music/The+Troggs
 16301,17230,Exilia,http://www.last.fm/music/Exilia
 16319,17248,None More Black,http://www.last.fm/music/None+More+Black
-16347,17276,Brulé,http://www.last.fm/music/Brul%C3%A9
+16347,17276,Brul\xe9,http://www.last.fm/music/Brul%C3%A9
 16352,17281,Samantha Fox,http://www.last.fm/music/Samantha+Fox
 16364,17294,Sixtoo,http://www.last.fm/music/Sixtoo
 16366,17296,Plastikman,http://www.last.fm/music/Plastikman
@@ -3870,7 +3870,7 @@
 16478,17424,Vanilla Ice,http://www.last.fm/music/Vanilla+Ice
 16491,17437,MC Hammer,http://www.last.fm/music/MC+Hammer
 16504,17450,Sloe Texture,http://www.last.fm/music/Sloe+Texture
-16534,17482,天野月子,http://www.last.fm/music/%E5%A4%A9%E9%87%8E%E6%9C%88%E5%AD%90
+16534,17482,\u5929\u91ce\u6708\u5b50,http://www.last.fm/music/%E5%A4%A9%E9%87%8E%E6%9C%88%E5%AD%90
 16538,17486,Erika,http://www.last.fm/music/Erika
 16542,17490,Melissa Etheridge,http://www.last.fm/music/Melissa+Etheridge
 16563,17511,Crazy Penis,http://www.last.fm/music/Crazy+Penis
@@ -3895,14 +3895,14 @@
 16719,17685,Two Hours Traffic,http://www.last.fm/music/Two+Hours+Traffic
 16721,17687,Pariah,http://www.last.fm/music/Pariah
 16727,17702,Pop Will Eat Itself,http://www.last.fm/music/Pop+Will+Eat+Itself
-16737,17712,松浦亜弥,http://www.last.fm/music/%E6%9D%BE%E6%B5%A6%E4%BA%9C%E5%BC%A5
-16738,17713,北出菜奈,http://www.last.fm/music/%E5%8C%97%E5%87%BA%E8%8F%9C%E5%A5%88
-16739,17714,メロン記念日,http://www.last.fm/music/%E3%83%A1%E3%83%AD%E3%83%B3%E8%A8%98%E5%BF%B5%E6%97%A5
-16740,17715,茅原実里,http://www.last.fm/music/%E8%8C%85%E5%8E%9F%E5%AE%9F%E9%87%8C
-16741,17716,月島きらり starring 久住小春(モーニング娘。),http://www.last.fm/music/%E6%9C%88%E5%B3%B6%E3%81%8D%E3%82%89%E3%82%8A+starring+%E4%B9%85%E4%BD%8F%E5%B0%8F%E6%98%A5%28%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%A8%98%E3%80%82%29
-16743,17718,矢井田瞳,http://www.last.fm/music/%E7%9F%A2%E4%BA%95%E7%94%B0%E7%9E%B3
+16737,17712,\u677e\u6d66\u4e9c\u5f25,http://www.last.fm/music/%E6%9D%BE%E6%B5%A6%E4%BA%9C%E5%BC%A5
+16738,17713,\u5317\u51fa\u83dc\u5948,http://www.last.fm/music/%E5%8C%97%E5%87%BA%E8%8F%9C%E5%A5%88
+16739,17714,\u30e1\u30ed\u30f3\u8a18\u5ff5\u65e5,http://www.last.fm/music/%E3%83%A1%E3%83%AD%E3%83%B3%E8%A8%98%E5%BF%B5%E6%97%A5
+16740,17715,\u8305\u539f\u5b9f\u91cc,http://www.last.fm/music/%E8%8C%85%E5%8E%9F%E5%AE%9F%E9%87%8C
+16741,17716,\u6708\u5cf6\u304d\u3089\u308a starring \u4e45\u4f4f\u5c0f\u6625(\u30e2\u30fc\u30cb\u30f3\u30b0\u5a18\u3002),http://www.last.fm/music/%E6%9C%88%E5%B3%B6%E3%81%8D%E3%82%89%E3%82%8A+starring+%E4%B9%85%E4%BD%8F%E5%B0%8F%E6%98%A5%28%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%A8%98%E3%80%82%29
+16743,17718,\u77e2\u4e95\u7530\u77b3,http://www.last.fm/music/%E7%9F%A2%E4%BA%95%E7%94%B0%E7%9E%B3
 16744,17719,Miz,http://www.last.fm/music/Miz
-16746,17721,安倍なつみ,http://www.last.fm/music/%E5%AE%89%E5%80%8D%E3%81%AA%E3%81%A4%E3%81%BF
+16746,17721,\u5b89\u500d\u306a\u3064\u307f,http://www.last.fm/music/%E5%AE%89%E5%80%8D%E3%81%AA%E3%81%A4%E3%81%BF
 16755,17730,Benassi Bros.,http://www.last.fm/music/Benassi+Bros.
 16804,17787,Faber Drive,http://www.last.fm/music/Faber+Drive
 16879,17887,Martha and the Muffins,http://www.last.fm/music/Martha+and+the+Muffins
