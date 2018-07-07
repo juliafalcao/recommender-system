@@ -49,7 +49,7 @@ def produzcsv_associacao2(): #funcao de pre processamento utilizada
 
 a = pd.read_csv("../data/user_artists_boolean.csv", sep=",", header=0,)
 a = a.drop(["user"],axis=1)
-frequent_itemsets = apriori(a, min_support=0.2, use_colnames=True)
+frequent_itemsets = apriori(a, min_support=0.1, use_colnames=True)
 rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1)
-rules.sort_values(['confidence','lift'],ascending=[0,0]).to_csv("../output/regras_supp_02.csv")
+rules.sort_values(['confidence','lift'],ascending=[0,0]).to_csv("../output/regras_supp_01.csv")
 
